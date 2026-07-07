@@ -115,19 +115,22 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 #s4 .cta{position:absolute;bottom:40px;left:0;right:0;text-align:center;font-size:22px;font-weight:600;color:var(--cyan);opacity:0;animation:fadeUp .6s 1.4s forwards;text-shadow:0 0 16px rgba(0,212,255,.8);z-index:2;}
 
 /* ══════════════ SLIDE 5 — PRODUCT ══════════════ */
-#s5 .wrap{position:absolute;inset:0;padding:14px 70px 14px;display:flex;flex-direction:column;}
-#s5 .slide-label{margin-bottom:6px;}
-#s5 .slide-title{font-size:48px;margin-bottom:8px;}
-#s5 .grid{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);gap:20px;flex:1;margin-top:8px;}
-.pd{background:linear-gradient(145deg,#0d1525,#080d18);border:1px solid var(--border);border-radius:22px;padding:0;display:flex;flex-direction:column;align-items:center;text-align:center;opacity:0;transform:translateY(35px);transition:all .6s;cursor:pointer;position:relative;overflow:hidden;}
+#s5 .wrap{position:absolute;inset:0;padding:10px 70px 10px;display:flex;flex-direction:column;}
+#s5 .slide-label{margin-bottom:4px;}
+#s5 .slide-title{font-size:44px;margin-bottom:4px;}
+#s5 .grid{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);gap:16px;flex:1;margin-top:4px;min-height:0;}
+.pd{background:linear-gradient(145deg,#0d1525,#080d18);border:1px solid var(--border);border-radius:22px;padding:0;display:flex;flex-direction:column;align-items:center;text-align:center;opacity:0;transform:translateY(35px);transition:all .6s;cursor:pointer;position:relative;overflow:hidden;min-height:0;}
 .pd.vis{opacity:1;transform:translateY(0);}
-.pd-top{width:100%;padding:18px 22px 10px;display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;}
-.pd-bottom{width:100%;padding:12px 22px 16px;border-top:1px solid var(--border);}
-.pd:hover{transform:translateY(-10px)!important;border-color:var(--purple);}
+.pd-top{width:100%;padding:14px 18px 8px;display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;min-height:0;}
+.pd-bottom{width:100%;padding:10px 18px 12px;border-top:1px solid var(--border);}
+.pd:hover{transform:translateY(-6px)!important;border-color:var(--purple);}
 .pd:hover .pd-bottom{background:rgba(108,99,255,.07);}
-.pd-img{width:100%;height:180px;border-radius:10px;overflow:hidden;margin-bottom:2px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(108,99,255,.06);border:1px solid rgba(108,99,255,.2);}
+.pd-img{width:100%;height:150px;border-radius:10px;overflow:hidden;margin-bottom:2px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(108,99,255,.06);border:1px solid rgba(108,99,255,.2);}
 .pd-img img{width:100%;height:100%;object-fit:cover;border-radius:8px;}
 .pd-img-placeholder{font-size:64px;display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:linear-gradient(145deg,rgba(108,99,255,.1),rgba(0,212,255,.05));}
+.pd-vid-container{position:relative;}
+.pd-hover-vid{width:100%;height:100%;object-fit:cover;border-radius:8px;opacity:0.3;transition:opacity .4s ease;}
+.pd:hover .pd-hover-vid{opacity:1;}
 .pd-icon-ring{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;border:2px solid;position:relative;transition:all .4s;flex-shrink:0;}
 .pd:hover .pd-icon-ring{transform:scale(1.12);}
 .pd-name{font-size:26px;font-weight:800;color:#fff;line-height:1.2;}
@@ -147,10 +150,10 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 #s5 .pd:nth-child(4)::after{background:linear-gradient(90deg,var(--green),#00aa55);}
 
 /* ══════════════ SLIDE 6 — WHY DIFFERENT ══════════════ */
-#s6 .wrap{position:absolute;inset:0;padding:22px 90px 22px;display:flex;flex-direction:column;}
-#s6 .slide-label{margin-bottom:6px;}
-#s6 .slide-title{font-size:44px;margin-bottom:4px;}
-#s6 .table-wrap{display:flex;flex-direction:column;gap:6px;margin:auto 0;justify-content:center;}
+#s6 .wrap{position:absolute;inset:0;padding:16px 90px 16px;display:flex;flex-direction:column;}
+#s6 .slide-label{margin-bottom:4px;}
+#s6 .slide-title{font-size:42px;margin-bottom:2px;}
+#s6 .table-wrap{display:flex;flex-direction:column;gap:5px;margin:auto 0;justify-content:center;padding-top:0;}
 .t-head{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;}
 .t-head-cell{padding:12px 20px;border-radius:12px 12px 0 0;font-size:19px;font-weight:700;text-align:center;}
 .t-head-cell.lbl{color:var(--muted);background:transparent;}

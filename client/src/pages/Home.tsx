@@ -226,6 +226,14 @@ export default function Home() {
     initParticles("p1");
     inited[1] = true;
 
+    // Hover video play/pause for slide 5
+    document.querySelectorAll('.pd').forEach((card) => {
+      const vid = card.querySelector('.pd-hover-vid') as HTMLVideoElement;
+      if (!vid) return;
+      card.addEventListener('mouseenter', () => { vid.play().catch(() => {}); });
+      card.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+    });
+
     // Draggable nav
     const navEl = document.getElementById("nav-bar");
     const handle = document.getElementById("nav-handle");
@@ -382,7 +390,11 @@ export default function Home() {
               <div className="grid">
                 <div className="pd" style={{ transitionDelay: ".1s" }}>
                   <div className="pd-top">
-                    <div className="pd-img"><div className="pd-img-placeholder">⚔️</div></div>
+                    <div className="pd-img pd-vid-container">
+                      <video className="pd-hover-vid" loop muted playsInline>
+                        <source src="/manus-storage/warroomgenerated_video(1)_f0040b05.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                     <div className="pd-icon-ring" style={{ borderColor: "rgba(255,107,107,.5)", background: "rgba(255,107,107,.08)" }}>
                       <span className="sword" style={{ fontSize: "36px" }}>⚔️</span>
                     </div>
@@ -395,7 +407,11 @@ export default function Home() {
                 </div>
                 <div className="pd" style={{ transitionDelay: ".25s" }}>
                   <div className="pd-top">
-                    <div className="pd-img"><div className="pd-img-placeholder">⚙️</div></div>
+                    <div className="pd-img pd-vid-container">
+                      <video className="pd-hover-vid" loop muted playsInline>
+                        <source src="/manus-storage/futureenginegenerated_video(1)_0a637807.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                     <div className="pd-icon-ring pulse-ring" style={{ borderColor: "rgba(0,212,255,.5)", background: "rgba(0,212,255,.08)" }}>
                       <span className="spin" style={{ fontSize: "36px", display: "block" }}>⚙️</span>
                     </div>
@@ -408,7 +424,11 @@ export default function Home() {
                 </div>
                 <div className="pd" style={{ transitionDelay: ".4s" }}>
                   <div className="pd-top">
-                    <div className="pd-img"><div className="pd-img-placeholder">🌐</div></div>
+                    <div className="pd-img pd-vid-container">
+                      <video className="pd-hover-vid" loop muted playsInline>
+                        <source src="/manus-storage/Futurescapegenerated_video(1)_0cc8ff9d.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                     <div className="pd-icon-ring pulse-ring" style={{ borderColor: "rgba(108,99,255,.5)", background: "rgba(108,99,255,.08)" }}>
                       <span style={{ fontSize: "36px" }}>🌐</span>
                     </div>
@@ -421,7 +441,11 @@ export default function Home() {
                 </div>
                 <div className="pd" style={{ transitionDelay: ".55s" }}>
                   <div className="pd-top">
-                    <div className="pd-img"><div className="pd-img-placeholder">🔗</div></div>
+                    <div className="pd-img pd-vid-container">
+                      <video className="pd-hover-vid" loop muted playsInline>
+                        <source src="/manus-storage/DecisionGraphgenerated_video(1)_cf9475c8.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                     <div className="pd-icon-ring" style={{ borderColor: "rgba(0,255,136,.5)", background: "rgba(0,255,136,.08)" }}>
                       <span className="dig-icon" style={{ fontSize: "36px" }}>🔗</span>
                     </div>
@@ -545,7 +569,7 @@ export default function Home() {
               <div className="slide-title">How We <span>Monetize</span></div>
               <div className="cards s9-cards">
                 <div className="bc" style={{ transitionDelay: ".2s", borderTop: "3px solid var(--purple)" }}>
-                  <div className="bc-img"><div className="bc-img-placeholder">💎</div></div>
+                  <div className="bc-img"><img src="/manus-storage/pasted_file_KXVHRx_image_ec0dbef2.png" alt="SaaS Dashboard" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(108,99,255,.3)", background: "rgba(108,99,255,.1)" }}><span>💎</span></div>
                   <div className="bc-num" style={{ color: "var(--purple)" }} data-target="4900">0</div>
                   <div className="bc-num-label">Teams already exploring</div>
@@ -554,7 +578,7 @@ export default function Home() {
                   <div className="bc-tag core">CORE REVENUE</div>
                 </div>
                 <div className="bc" style={{ transitionDelay: ".4s", borderTop: "3px solid var(--cyan)" }}>
-                  <div className="bc-img"><div className="bc-img-placeholder">🏢</div></div>
+                  <div className="bc-img"><img src="/manus-storage/pasted_file_jnm9wN_image_e2414623.png" alt="Enterprise Hub" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.1)" }}><span>🏢</span></div>
                   <div className="bc-num" style={{ color: "var(--cyan)" }} data-target="250">0</div>
                   <div className="bc-num-label">Enterprise seats target Y1</div>
@@ -563,7 +587,7 @@ export default function Home() {
                   <div className="bc-tag high">HIGH VALUE</div>
                 </div>
                 <div className="bc" style={{ transitionDelay: ".6s", borderTop: "3px solid var(--green)" }}>
-                  <div className="bc-img"><div className="bc-img-placeholder">🔌</div></div>
+                  <div className="bc-img"><img src="/manus-storage/pasted_file_vrwzdt_image_c10bfbe6.png" alt="API Connector Hub" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.1)" }}><span>🔌</span></div>
                   <div className="bc-num" style={{ color: "var(--green)" }} data-target="12">0</div>
                   <div className="bc-num-label">Integration partners planned</div>
@@ -734,7 +758,7 @@ export default function Home() {
               <div className="sub-line">Computed decisions. Not guesses. Decision Intelligence, redefined.</div>
               <div className="divider"></div>
               <div className="cta-text">Join the future of decisions · <a href="https://brainpowerinvestor.com" target="_blank" rel="noopener noreferrer">brainpowerinvestor.com</a></div>
-              <div className="cta-text cta-contact">Contact us directly: <a href="mailto:fathi@brainpowerinvestor.com">fathi@brainpowerinvestor.com</a></div>
+              <div className="cta-text cta-contact">Contact us directly: <a href="mailto:fathi.alriyami@smarthinkerz.com">fathi.alriyami@smarthinkerz.com</a></div>
             </div>
           </div>
 
