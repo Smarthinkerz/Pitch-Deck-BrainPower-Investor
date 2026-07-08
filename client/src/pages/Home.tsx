@@ -571,8 +571,7 @@ export default function Home() {
                 <div className="bc" style={{ transitionDelay: ".2s", borderTop: "3px solid var(--purple)" }}>
                   <div className="bc-img"><img src="/manus-storage/pasted_file_KXVHRx_image_ec0dbef2.png" alt="SaaS Dashboard" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(108,99,255,.3)", background: "rgba(108,99,255,.1)" }}><span>💎</span></div>
-                  <div className="bc-num" style={{ color: "var(--purple)" }} data-target="4900">0</div>
-                  <div className="bc-num-label">Teams already exploring</div>
+
                   <div className="bc-name">SaaS Subscriptions</div>
                   <div className="bc-desc">Monthly &amp; annual plans for teams and individuals. Tiered pricing scales from solo thinkers to full enterprises.</div>
                   <div className="bc-tag core">CORE REVENUE</div>
@@ -580,8 +579,7 @@ export default function Home() {
                 <div className="bc" style={{ transitionDelay: ".4s", borderTop: "3px solid var(--cyan)" }}>
                   <div className="bc-img"><img src="/manus-storage/pasted_file_jnm9wN_image_e2414623.png" alt="Enterprise Hub" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.1)" }}><span>🏢</span></div>
-                  <div className="bc-num" style={{ color: "var(--cyan)" }} data-target="250">0</div>
-                  <div className="bc-num-label">Enterprise seats target Y1</div>
+
                   <div className="bc-name">Enterprise Licensing</div>
                   <div className="bc-desc">Custom deployments for large organizations. White-label options, dedicated infrastructure, and priority support.</div>
                   <div className="bc-tag high">HIGH VALUE</div>
@@ -589,11 +587,10 @@ export default function Home() {
                 <div className="bc" style={{ transitionDelay: ".6s", borderTop: "3px solid var(--green)" }}>
                   <div className="bc-img"><img src="/manus-storage/pasted_file_vrwzdt_image_c10bfbe6.png" alt="API Connector Hub" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.1)" }}><span>🔌</span></div>
-                  <div className="bc-num" style={{ color: "var(--green)" }} data-target="12">0</div>
-                  <div className="bc-num-label">Integration partners planned</div>
+
                   <div className="bc-name">Integrations &amp; Modules</div>
                   <div className="bc-desc">API access, premium simulation layers, and add-on modules for specialized sectors and industry verticals.</div>
-                  <div className="bc-tag fut">FUTURE STREAM</div>
+                  <div className="bc-tag fut">FUTURE</div>
                 </div>
               </div>
             </div>
