@@ -317,10 +317,10 @@ export default function Home() {
               <div className="slide-label">02 / The Problem</div>
               <div className="slide-title">Decision-Makers Are <span>Flying Blind</span></div>
               <div className="cards">
-                <div className="pc" style={{ transitionDelay: ".1s" }}><div className="pc-icon"><div className="pc-icon-placeholder">📊</div></div><div className="pc-body"><h3>Overwhelming Data</h3><p>Drowning in information with zero clarity on what actually matters</p></div></div>
-                <div className="pc" style={{ transitionDelay: ".25s" }}><div className="pc-icon"><div className="pc-icon-placeholder">❓</div></div><div className="pc-body"><h3>Uncertainty Until Execution</h3><p>No visibility into outcomes until after the decision is already made</p></div></div>
-                <div className="pc" style={{ transitionDelay: ".4s" }}><div className="pc-icon"><div className="pc-icon-placeholder">⚠️</div></div><div className="pc-body"><h3>High-Risk, Low Visibility</h3><p>Critical decisions made without seeing consequences in advance</p></div></div>
-                <div className="pc" style={{ transitionDelay: ".55s" }}><div className="pc-icon"><div className="pc-icon-placeholder">🤖</div></div><div className="pc-body"><h3>AI Tools That Guess, Not Compute</h3><p>AI tools respond to prompts but never structure or simulate outcomes</p></div></div>
+                <div className="pc" style={{ transitionDelay: ".1s" }}><div className="pc-icon"><img src="/manus-storage/pasted_file_dK5T5D_image_6f5f466f.png" alt="Overwhelming Data" /></div><div className="pc-body"><h3>Overwhelming Data</h3><p>Drowning in information with zero clarity on what actually matters</p></div></div>
+                <div className="pc" style={{ transitionDelay: ".25s" }}><div className="pc-icon"><img src="/manus-storage/pasted_file_Kykowq_image_0b2a36ef.png" alt="Uncertainty" /></div><div className="pc-body"><h3>Uncertainty Until Execution</h3><p>No visibility into outcomes until after the decision is already made</p></div></div>
+                <div className="pc" style={{ transitionDelay: ".4s" }}><div className="pc-icon"><img src="/manus-storage/pasted_file_grUZin_image_8da431e6.png" alt="High Risk" /></div><div className="pc-body"><h3>High-Risk, Low Visibility</h3><p>Critical decisions made without seeing consequences in advance</p></div></div>
+                <div className="pc" style={{ transitionDelay: ".55s" }}><div className="pc-icon"><img src="/manus-storage/pasted_file_woPWeV_image_68df2c07.png" alt="AI Tools" /></div><div className="pc-body"><h3>AI Tools That Guess, Not Compute</h3><p>AI tools respond to prompts but never structure or simulate outcomes</p></div></div>
               </div>
               <div className="banner">👉 Critical decisions are made on gut feel and numbers <span>no one can trust</span></div>
             </div>
