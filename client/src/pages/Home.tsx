@@ -317,10 +317,10 @@ export default function Home() {
               <div className="slide-label">02 / The Problem</div>
               <div className="slide-title">Decision-Makers Are <span>Flying Blind</span></div>
               <div className="cards">
-                <div className="pc" style={{ transitionDelay: ".1s" }}><div className="pc-icon"><img src="/manus-storage/pasted_file_dK5T5D_image_6f5f466f.png" alt="Overwhelming Data" /></div><div className="pc-body"><h3>Overwhelming Data</h3><p>Drowning in information with zero clarity on what actually matters</p></div></div>
-                <div className="pc" style={{ transitionDelay: ".25s" }}><div className="pc-icon"><img src="/manus-storage/pasted_file_Kykowq_image_0b2a36ef.png" alt="Uncertainty" /></div><div className="pc-body"><h3>Uncertainty Until Execution</h3><p>No visibility into outcomes until after the decision is already made</p></div></div>
-                <div className="pc" style={{ transitionDelay: ".4s" }}><div className="pc-icon"><img src="/manus-storage/pasted_file_grUZin_image_8da431e6.png" alt="High Risk" /></div><div className="pc-body"><h3>High-Risk, Low Visibility</h3><p>Critical decisions made without seeing consequences in advance</p></div></div>
-                <div className="pc" style={{ transitionDelay: ".55s" }}><div className="pc-icon"><img src="/manus-storage/pasted_file_woPWeV_image_68df2c07.png" alt="AI Tools" /></div><div className="pc-body"><h3>AI Tools That Guess, Not Compute</h3><p>AI tools respond to prompts but never structure or simulate outcomes</p></div></div>
+                <div className="pc" style={{ transitionDelay: ".1s" }}><div className="pc-icon"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/mdjYdUZQTstBTWgk.png" alt="Overwhelming Data" /></div><div className="pc-body"><h3>Overwhelming Data</h3><p>Drowning in information with zero clarity on what actually matters</p></div></div>
+                <div className="pc" style={{ transitionDelay: ".25s" }}><div className="pc-icon"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/fFcKLkWKzDDMNexH.png" alt="Uncertainty" /></div><div className="pc-body"><h3>Uncertainty Until Execution</h3><p>No visibility into outcomes until after the decision is already made</p></div></div>
+                <div className="pc" style={{ transitionDelay: ".4s" }}><div className="pc-icon"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/rHiRnGnTdyDXPKGo.png" alt="High Risk" /></div><div className="pc-body"><h3>High-Risk, Low Visibility</h3><p>Critical decisions made without seeing consequences in advance</p></div></div>
+                <div className="pc" style={{ transitionDelay: ".55s" }}><div className="pc-icon"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/hQbOEWiYYueiQgdI.png" alt="AI Tools" /></div><div className="pc-body"><h3>AI Tools That Guess, Not Compute</h3><p>AI tools respond to prompts but never structure or simulate outcomes</p></div></div>
               </div>
               <div className="banner">👉 Critical decisions are made on gut feel and numbers <span>no one can trust</span></div>
             </div>
@@ -346,7 +346,7 @@ export default function Home() {
               <div className="right">
                 <div className="video-frame">
                   <video autoPlay loop muted playsInline style={{ height: "620px", width: "auto", display: "block" }}>
-                    <source src="/manus-storage/mobile_1e456a85.mp4" type="video/mp4" />
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/DefqAGNYyCDaSKqG.mp4" type="video/mp4" />
                   </video>
                   <div className="video-glow"></div>
                 </div>
@@ -371,7 +371,7 @@ export default function Home() {
               <div className="right">
                 <div className="s4-vid-box">
                   <video autoPlay loop muted playsInline>
-                    <source src="/manus-storage/future(1)_3a83b3a8.mp4" type="video/mp4" />
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/vhvQhMRSqOzgLtfZ.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -392,7 +392,7 @@ export default function Home() {
                   <div className="pd-top">
                     <div className="pd-img pd-vid-container">
                       <video className="pd-hover-vid" loop muted playsInline>
-                        <source src="/manus-storage/warroomgenerated_video(1)_f0040b05.mp4" type="video/mp4" />
+                        <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/TYoIICOiYcOXqtXj.mp4" type="video/mp4" />
                       </video>
                     </div>
                     <div className="pd-icon-ring" style={{ borderColor: "rgba(255,107,107,.5)", background: "rgba(255,107,107,.08)" }}>
@@ -409,7 +409,7 @@ export default function Home() {
                   <div className="pd-top">
                     <div className="pd-img pd-vid-container">
                       <video className="pd-hover-vid" loop muted playsInline>
-                        <source src="/manus-storage/futureenginegenerated_video(1)_0a637807.mp4" type="video/mp4" />
+                        <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/qjGkAuUAbUwGbRnu.mp4" type="video/mp4" />
                       </video>
                     </div>
                     <div className="pd-icon-ring pulse-ring" style={{ borderColor: "rgba(0,212,255,.5)", background: "rgba(0,212,255,.08)" }}>
@@ -426,7 +426,7 @@ export default function Home() {
                   <div className="pd-top">
                     <div className="pd-img pd-vid-container">
                       <video className="pd-hover-vid" loop muted playsInline>
-                        <source src="/manus-storage/Futurescapegenerated_video(1)_0cc8ff9d.mp4" type="video/mp4" />
+                        <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/fgHQzlHcyocrebkB.mp4" type="video/mp4" />
                       </video>
                     </div>
                     <div className="pd-icon-ring pulse-ring" style={{ borderColor: "rgba(108,99,255,.5)", background: "rgba(108,99,255,.08)" }}>
@@ -443,7 +443,7 @@ export default function Home() {
                   <div className="pd-top">
                     <div className="pd-img pd-vid-container">
                       <video className="pd-hover-vid" loop muted playsInline>
-                        <source src="/manus-storage/DecisionGraphgenerated_video(1)_cf9475c8.mp4" type="video/mp4" />
+                        <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/lOxfxGUoTQDJFYCD.mp4" type="video/mp4" />
                       </video>
                     </div>
                     <div className="pd-icon-ring" style={{ borderColor: "rgba(0,255,136,.5)", background: "rgba(0,255,136,.08)" }}>
@@ -525,7 +525,7 @@ export default function Home() {
               <div className="right">
                 <div className="vid-box">
                   <video autoPlay loop muted playsInline>
-                    <source src="/manus-storage/slide7chartslide_526b4773.mp4" type="video/mp4" />
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/DOzAkGhivlmXAIGZ.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -569,7 +569,7 @@ export default function Home() {
               <div className="slide-title">How We <span>Monetize</span></div>
               <div className="cards s9-cards">
                 <div className="bc" style={{ transitionDelay: ".2s", borderTop: "3px solid var(--purple)" }}>
-                  <div className="bc-img"><img src="/manus-storage/pasted_file_KXVHRx_image_ec0dbef2.png" alt="SaaS Dashboard" /></div>
+                  <div className="bc-img"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/lfSJwoMZDYXWEyos.png" alt="SaaS Dashboard" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(108,99,255,.3)", background: "rgba(108,99,255,.1)" }}><span>💎</span></div>
 
                   <div className="bc-name">SaaS Subscriptions</div>
@@ -577,7 +577,7 @@ export default function Home() {
                   <div className="bc-tag core">CORE REVENUE</div>
                 </div>
                 <div className="bc" style={{ transitionDelay: ".4s", borderTop: "3px solid var(--cyan)" }}>
-                  <div className="bc-img"><img src="/manus-storage/pasted_file_jnm9wN_image_e2414623.png" alt="Enterprise Hub" /></div>
+                  <div className="bc-img"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/FmRvhUSUpwGMNNZN.png" alt="Enterprise Hub" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.1)" }}><span>🏢</span></div>
 
                   <div className="bc-name">Enterprise Licensing</div>
@@ -585,7 +585,7 @@ export default function Home() {
                   <div className="bc-tag high">HIGH VALUE</div>
                 </div>
                 <div className="bc" style={{ transitionDelay: ".6s", borderTop: "3px solid var(--green)" }}>
-                  <div className="bc-img"><img src="/manus-storage/pasted_file_vrwzdt_image_c10bfbe6.png" alt="API Connector Hub" /></div>
+                  <div className="bc-img"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/YgbVJdOqlfIvJxSr.png" alt="API Connector Hub" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.1)" }}><span>🔌</span></div>
 
                   <div className="bc-name">Integrations &amp; Modules</div>
@@ -601,7 +601,7 @@ export default function Home() {
             <canvas className="bg-canvas" id="p10"></canvas>
             <div className="bg-vid-frame">
               <video className="bg-vid-inner" autoPlay loop muted playsInline>
-                <source src="/manus-storage/controlroom_125c7896.mp4" type="video/mp4" />
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/lVOiupAXAppIoyaM.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="bg-overlay"></div>
@@ -734,7 +734,7 @@ export default function Home() {
               <div className="right">
                 <div className="vid-wrap">
                   <video autoPlay loop muted playsInline>
-                    <source src="/manus-storage/piechartgenerated_video(1)_a6fde7d4.mp4" type="video/mp4" />
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/IfCTBWbReCoCAqyy.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -748,7 +748,7 @@ export default function Home() {
               <div className="brand-lbl">BRAINPOWER AI</div>
               <div className="from">From Thinking</div>
               <div className="arrow-area">
-                <img className="neon-head" src="/manus-storage/neion_image___02864a3d.png" alt="Neon AI" />
+                <img className="neon-head" src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/xzVsGKZWwvmZhdMs.png" alt="Neon AI" />
                 <div className="arrow-txt">→</div>
               </div>
               <div className="to">To Seeing &amp; Exploring Futures</div>
