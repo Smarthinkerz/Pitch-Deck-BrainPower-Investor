@@ -303,23 +303,39 @@ export default function Home() {
         style={{
           position: "fixed",
           top: "16px",
-          left: "16px",
+          // Right-aligned. The slide labels ("07 / Market Opportunity") sit top
+          // left, so this keeps the two off each other.
+          right: "16px",
           zIndex: 200,
           display: "inline-flex",
           alignItems: "center",
           gap: "6px",
           fontSize: "13px",
-          fontWeight: 500,
-          color: "rgba(226,232,240,0.75)",
+          fontWeight: 600,
+          // Neon blue, matching the #00d4ff accent the portal already uses for
+          // its stat figures. The glow is what makes it read as neon rather
+          // than as flat blue text.
+          color: "#00d4ff",
+          textShadow: "0 0 8px rgba(0,212,255,0.65), 0 0 18px rgba(0,212,255,0.35)",
           textDecoration: "none",
-          padding: "6px 10px",
+          padding: "6px 12px",
           borderRadius: "8px",
-          background: "rgba(10,15,30,0.55)",
+          background: "rgba(6,12,26,0.6)",
           backdropFilter: "blur(6px)",
-          border: "1px solid rgba(255,255,255,0.12)",
+          border: "1px solid rgba(0,212,255,0.45)",
+          boxShadow: "0 0 12px rgba(0,212,255,0.25)",
+          transition: "color 160ms ease, box-shadow 160ms ease, border-color 160ms ease",
         }}
-        onMouseEnter={(e) => { e.currentTarget.style.color = "#7dd3fc"; }}
-        onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(226,232,240,0.75)"; }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.color = "#7df3ff";
+          e.currentTarget.style.borderColor = "rgba(0,212,255,0.85)";
+          e.currentTarget.style.boxShadow = "0 0 20px rgba(0,212,255,0.5)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.color = "#00d4ff";
+          e.currentTarget.style.borderColor = "rgba(0,212,255,0.45)";
+          e.currentTarget.style.boxShadow = "0 0 12px rgba(0,212,255,0.25)";
+        }}
       >
         <span aria-hidden="true">←</span>
         <span>Back to SmarThinkerz Hub</span>
