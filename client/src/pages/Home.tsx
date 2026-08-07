@@ -298,7 +298,7 @@ export default function Home() {
                 <div className="brand">Brain<span>Power</span> AI</div>
                 <div className="tagline">The Decision Intelligence Engine</div>
                 <div className="sub">Decisions computed, not guessed. A deterministic engine that calculates every score, with 3D simulation to see the outcomes before you act.</div>
-                <div className="badge">PRE-SEED · 2025</div>
+                <div className="badge">PRE-SEED</div>
               </div>
               <div className="right">
                 <div className="phone-wrap">
@@ -416,7 +416,7 @@ export default function Home() {
                       <span className="spin" style={{ fontSize: "36px", display: "block" }}>⚙️</span>
                     </div>
                     <div className="pd-name">Futures Engine</div>
-                    <div className="pd-sub">Run hundreds of scenarios in seconds. Simulate outcomes before a single dollar is spent.</div>
+                    <div className="pd-sub">Run 10,000 seeded Monte Carlo iterations per decision. Simulate outcomes before a single dollar is spent.</div>
                   </div>
                   <div className="pd-bottom">
                     <div style={{ fontSize: "13px", color: "var(--cyan)", fontWeight: 600, letterSpacing: "1px" }}>SCENARIO SIM</div>
@@ -509,7 +509,6 @@ export default function Home() {
               <div className="left">
                 <div className="slide-label">07 / Market Opportunity</div>
                 <div className="slide-title">Market <span>Opportunity</span></div>
-                <div className="hero">$500B+</div>
                 <div className="hero-lbl">The Decision Intelligence Market</div>
                 <div className="tags">
                   <div className="tpill p">AI</div>
@@ -551,11 +550,11 @@ export default function Home() {
                   <div className="fs" style={{ transitionDelay: ".95s" }}><div className="fn fut">🚀</div><div className="fl">Execute with Confidence</div></div>
                 </div>
                 <div className="outcomes">
-                  <div className="oc" style={{ transitionDelay: "1.1s" }}><div className="oc-icon">⚡</div><div className="oc-label">10x Faster</div><div className="oc-sub">Decision velocity</div></div>
+                  <div className="oc" style={{ transitionDelay: "1.1s" }}><div className="oc-icon">⚡</div><div className="oc-label">10,000 Runs</div><div className="oc-sub">Seeded Monte Carlo per decision</div></div>
                   <div className="oc" style={{ transitionDelay: "1.2s" }}><div className="oc-icon">🎯</div><div className="oc-label">Crystal Clarity</div><div className="oc-sub">See outcomes first</div></div>
                   <div className="oc" style={{ transitionDelay: "1.3s" }}><div className="oc-icon">🛡️</div><div className="oc-label">Lower Risk</div><div className="oc-sub">Simulate before committing</div></div>
                   <div className="oc" style={{ transitionDelay: "1.4s" }}><div className="oc-icon">🌐</div><div className="oc-label">3D View</div><div className="oc-sub">Navigate the future visually</div></div>
-                  <div className="oc" style={{ transitionDelay: "1.5s" }}><div className="oc-icon">📈</div><div className="oc-label">Better ROI</div><div className="oc-sub">Optimized decisions</div></div>
+                  <div className="oc" style={{ transitionDelay: "1.5s" }}><div className="oc-icon">📈</div><div className="oc-label">Reproducible</div><div className="oc-sub">Same inputs, byte-identical output</div></div>
                 </div>
               </div>
             </div>
@@ -610,8 +609,8 @@ export default function Home() {
               <div className="slide-title">Where <span>We Are</span></div>
               <div className="tl-area">
                 <div className="ms-row">
-                  <div className="ms" style={{ transitionDelay: ".2s" }}><div className="ms-title">Product Developed</div><div className="ms-sub">Core platform built &amp;<br />functional on iOS and Android</div></div>
-                  <div className="ms" style={{ transitionDelay: ".4s" }}><div className="ms-title">Early Validation</div><div className="ms-sub">Re-validating the upgraded<br />engine version with users</div><div className="ms-here">← WE ARE HERE</div></div>
+                  <div className="ms" style={{ transitionDelay: ".2s" }}><div className="ms-title">Product Developed</div><div className="ms-sub">Core engine built &amp;<br />running on web, iOS and Android</div></div>
+                  <div className="ms" style={{ transitionDelay: ".4s" }}><div className="ms-title">Early Validation</div><div className="ms-sub">Hardening the engine ahead of<br />go-to-market</div><div className="ms-here">← WE ARE HERE</div></div>
                   <div className="ms" style={{ transitionDelay: ".6s" }}><div className="ms-title">Market Adoption</div><div className="ms-sub">Go-to-market launch &amp;<br />customer acquisition</div></div>
                   <div className="ms" style={{ transitionDelay: ".8s" }}><div className="ms-title">Scale &amp; Expand</div><div className="ms-sub">Enterprise &amp; global<br />market penetration</div></div>
                 </div>
@@ -627,11 +626,11 @@ export default function Home() {
                 <div className="cards-row">
                   <div className="ms-card" style={{ transitionDelay: ".3s", borderTop: "2px solid var(--green)" }}>
                     <div className="ms-card-num" style={{ color: "var(--green)" }}>✓</div>
-                    <div className="ms-card-label">iOS + Android Built</div>
+                    <div className="ms-card-label">Web App Live</div>
                   </div>
                   <div className="ms-card" style={{ transitionDelay: ".5s", borderTop: "2px solid var(--purple)" }}>
                     <div className="ms-card-num" style={{ color: "var(--purple)" }}>✓</div>
-                    <div className="ms-card-label">Tested with Early Users</div>
+                    <div className="ms-card-label">Determinism Verified</div>
                   </div>
                   <div className="ms-card" style={{ transitionDelay: ".7s", borderTop: "2px solid var(--cyan)" }}>
                     <div className="ms-card-num" style={{ color: "var(--cyan)" }}>Q3</div>
