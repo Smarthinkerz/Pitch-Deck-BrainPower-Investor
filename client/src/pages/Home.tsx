@@ -286,6 +286,44 @@ export default function Home() {
 
   return (
     <div className="pitch-deck-wrapper">
+      {/* Back to the hub. Placed once, outside #deck, and fixed to the
+        * viewport: the deck swaps one slide at a time inside #viewport, so a
+        * single fixed element is present on all 14 slides. Adding it per-slide
+        * would mean 14 copies to keep in step.
+        *
+        * Points at the apex: smarthinkerz.com answers 200 directly and
+        * www.smarthinkerz.com 301s to it. The portal had this link misspelled
+        * as smarhinkerz.com, a domain that does not resolve at all — worth not
+        * repeating here.
+        *
+        * zIndex sits above the slide canvases, which use z-index up to 20. */}
+      <a
+        href="https://smarthinkerz.com"
+        title="Back to SmarThinkerz Hub"
+        style={{
+          position: "fixed",
+          top: "16px",
+          left: "16px",
+          zIndex: 200,
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "6px",
+          fontSize: "13px",
+          fontWeight: 500,
+          color: "rgba(226,232,240,0.75)",
+          textDecoration: "none",
+          padding: "6px 10px",
+          borderRadius: "8px",
+          background: "rgba(10,15,30,0.55)",
+          backdropFilter: "blur(6px)",
+          border: "1px solid rgba(255,255,255,0.12)",
+        }}
+        onMouseEnter={(e) => { e.currentTarget.style.color = "#7dd3fc"; }}
+        onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(226,232,240,0.75)"; }}
+      >
+        <span aria-hidden="true">←</span>
+        <span>Back to SmarThinkerz Hub</span>
+      </a>
       <div id="deck" ref={deckRef}>
         <div id="viewport" ref={vpRef}>
 
