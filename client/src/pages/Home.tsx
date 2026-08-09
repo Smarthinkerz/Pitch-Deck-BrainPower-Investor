@@ -299,7 +299,7 @@ export default function Home() {
         * zIndex sits above the slide canvases, which use z-index up to 20. */}
       <a
         href="https://smarthinkerz.com"
-        title="Back to SmarThinkerz Hub"
+        title="SmarThinkerz Hub"
         style={{
           position: "fixed",
           top: "16px",
@@ -337,8 +337,10 @@ export default function Home() {
           e.currentTarget.style.boxShadow = "0 0 12px rgba(0,212,255,0.25)";
         }}
       >
-        <span aria-hidden="true">←</span>
-        <span>Back to SmarThinkerz Hub</span>
+        {/* Arrow trails the label and points forward: this navigates outward
+          * to the hub, not back to a previous slide. */}
+        <span>SmarThinkerz Hub</span>
+        <span aria-hidden="true">→</span>
       </a>
       <div id="deck" ref={deckRef}>
         <div id="viewport" ref={vpRef}>
