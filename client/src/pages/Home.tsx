@@ -6,7 +6,7 @@ export default function Home() {
 
   useEffect(() => {
     // Engine
-    const TOTAL = 14;
+    const TOTAL = 17;
     let cur = 1;
     let busy = false;
     const inited: Record<number, boolean> = {};
@@ -158,12 +158,16 @@ export default function Home() {
 
     // Slide inits
     function i2() { stagger("#s2 .pc", "vis", 150, 180); }
-    function i3() { stagger("#s3 .sp", "vis", 450, 170); }
-    function i4() { stagger("#s4 .fi", "vis", 350, 180); }
-    function i5() { stagger("#s5 .pd", "vis", 150, 160); }
-    function i6() {
-      stagger("#s6 .t-row", "vis", 350, 200);
-      document.querySelectorAll("#s6 .t-row").forEach((row, i) => {
+    function i3() {
+      stagger("#s3 .wn-card", "vis", 250, 200);
+      setTimeout(() => document.querySelectorAll("#s3 .wn-foot").forEach((e) => e.classList.add("vis")), 900);
+    }
+    function i4() { stagger("#s4 .sp", "vis", 450, 170); }
+    function i5() { stagger("#s5 .fi", "vis", 350, 180); }
+    function i6() { stagger("#s6 .pd", "vis", 150, 160); }
+    function i7() {
+      stagger("#s7 .t-row", "vis", 350, 200);
+      document.querySelectorAll("#s7 .t-row").forEach((row, i) => {
         setTimeout(() => {
           const cell = row.querySelector(".bpc");
           if (cell) cell.classList.add("glow");
@@ -171,14 +175,22 @@ export default function Home() {
       });
     }
     function i8() {
-      stagger("#s8 .fs", "vis", 150, 200);
-      stagger("#s8 .fa", "vis", 300, 200);
-      stagger("#s8 .oc", "vis", 1100, 120);
+      stagger("#s8 .cmp-row", "vis", 300, 160);
+      setTimeout(() => document.querySelectorAll("#s8 .cmp-foot").forEach((e) => e.classList.add("vis")), 1200);
     }
     function i9() {
-      stagger("#s9 .bc", "vis", 200, 200);
+      stagger("#s9 .fn-band", "vis", 300, 200);
+      setTimeout(() => document.querySelectorAll("#s9 .som-calc").forEach((e) => e.classList.add("vis")), 900);
+    }
+    function i10() {
+      stagger("#s10 .fs", "vis", 150, 200);
+      stagger("#s10 .fa", "vis", 300, 200);
+      stagger("#s10 .oc", "vis", 1100, 120);
+    }
+    function i11() {
+      stagger("#s11 .bc", "vis", 200, 200);
       setTimeout(() => {
-        document.querySelectorAll("#s9 .bc-num[data-target]").forEach((el) => {
+        document.querySelectorAll("#s11 .bc-num[data-target]").forEach((el) => {
           const target = parseInt((el as HTMLElement).dataset.target || "0");
           let v = 0;
           const step = Math.ceil(target / 60);
@@ -190,10 +202,10 @@ export default function Home() {
         });
       }, 800);
     }
-    function i10() {
-      stagger("#s10 .ms", "vis", 200, 200);
-      stagger("#s10 .ms-card", "vis", 400, 150);
-      document.querySelectorAll("#s10 .ms-here").forEach((e) =>
+    function i12() {
+      stagger("#s12 .ms", "vis", 200, 200);
+      stagger("#s12 .ms-card", "vis", 400, 150);
+      document.querySelectorAll("#s12 .ms-here").forEach((e) =>
         setTimeout(() => e.classList.add("vis"), 900)
       );
       setTimeout(() => {
@@ -201,12 +213,20 @@ export default function Home() {
         if (tf) tf.style.width = "33%";
       }, 500);
     }
-    function i11() { stagger("#s11 .tc", "vis", 200, 200); }
-    function i12() { stagger("#s12 .pi", "vis", 350, 200); }
     function i13() {
-      stagger("#s13 .ui", "vis", 500, 200);
+      stagger("#s13 .acc-card", "vis", 250, 200);
+      setTimeout(() => document.querySelectorAll("#s13 .acc-evidence").forEach((e) => e.classList.add("vis")), 1000);
+    }
+    function i14() {
+      stagger("#s14 .tc", "vis", 200, 200);
+      setTimeout(() => document.querySelectorAll("#s14 .advisors").forEach((e) => e.classList.add("vis")), 900);
+    }
+    function i15() { stagger("#s15 .pi", "vis", 350, 200); }
+    function i16() {
+      stagger("#s16 .ui", "vis", 500, 200);
+      stagger("#s16 .plan-step", "vis", 400, 200);
       setTimeout(() => {
-        document.querySelectorAll("#s13 .ui-fill").forEach((el) => {
+        document.querySelectorAll("#s16 .ui-fill").forEach((el) => {
           setTimeout(() => {
             (el as HTMLElement).style.width = (el as HTMLElement).dataset.w || "0%";
           }, 100);
@@ -214,7 +234,7 @@ export default function Home() {
       }, 700);
     }
 
-    const initFns: Record<number, () => void> = { 2: i2, 3: i3, 4: i4, 5: i5, 6: i6, 8: i8, 9: i9, 10: i10, 11: i11, 12: i12, 13: i13 };
+    const initFns: Record<number, () => void> = { 2: i2, 3: i3, 4: i4, 5: i5, 6: i6, 7: i7, 8: i8, 9: i9, 10: i10, 11: i11, 12: i12, 13: i13, 14: i14, 15: i15, 16: i16 };
 
     function initSlide(n: number) {
       initParticles(`p${n}`);
@@ -382,12 +402,44 @@ export default function Home() {
             </div>
           </div>
 
-          {/* S3 SOLUTION */}
+          {/* S3 WHY NOW */}
           <div className="slide" id="s3">
             <canvas className="bg-canvas" id="p3"></canvas>
             <div className="wrap">
+              <div className="slide-label">03 / Why Now</div>
+              <div className="slide-title">Why <span>Now</span></div>
+              <div className="wn-headline">Rising demand for AI that can be trusted and audited, not just generated.</div>
+              <div className="glow-line"></div>
+              <div className="wn-grid">
+                <div className="wn-card" style={{ transitionDelay: ".25s" }}>
+                  <div className="wn-num">01</div>
+                  <div className="wn-slot"><span className="todo">TODO-FATHI</span></div>
+                  <div className="todo-hint">Driver one. The shift in the market, the regulation, or the technology that makes this the moment. One line, with its source.</div>
+                </div>
+                <div className="wn-card" style={{ transitionDelay: ".45s" }}>
+                  <div className="wn-num">02</div>
+                  <div className="wn-slot"><span className="todo">TODO-FATHI</span></div>
+                  <div className="todo-hint">Driver two. Same rule. If it cannot be sourced, it does not go on the slide.</div>
+                </div>
+                <div className="wn-card" style={{ transitionDelay: ".65s" }}>
+                  <div className="wn-num">03</div>
+                  <div className="wn-slot"><span className="todo">TODO-FATHI</span></div>
+                  <div className="todo-hint">Driver three. Same rule.</div>
+                </div>
+              </div>
+              <div className="wn-foot">
+                <div className="wn-foot-lbl">Why not two years ago, and why not two years from now</div>
+                <span className="todo">TODO-FATHI</span>
+              </div>
+            </div>
+          </div>
+
+          {/* S4 SOLUTION */}
+          <div className="slide" id="s4">
+            <canvas className="bg-canvas" id="p4"></canvas>
+            <div className="wrap">
               <div className="left">
-                <div className="slide-label">03 / The Solution</div>
+                <div className="slide-label">04 / The Solution</div>
                 <div className="slide-title">Brain<span>Power</span> AI</div>
                 <div style={{ fontSize: "22px", color: "var(--muted)", opacity: 0, animation: "fadeUp .6s .4s forwards", marginBottom: "6px" }}>A Decision Intelligence Platform</div>
                 <div className="glow-line"></div>
@@ -410,12 +462,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* S4 FUTURESCAPE */}
-          <div className="slide" id="s4">
-            <canvas className="bg-canvas" id="p4"></canvas>
+          {/* S5 FUTURESCAPE */}
+          <div className="slide" id="s5">
+            <canvas className="bg-canvas" id="p5"></canvas>
             <div className="wrap">
               <div className="left">
-                <div className="slide-label">04 / The Breakthrough</div>
+                <div className="slide-label">05 / The Breakthrough</div>
                 <div className="slide-title">Futurescape<br /><span>3D Decision Simulation</span></div>
                 <div className="feats">
                   <div className="fi" style={{ transitionDelay: ".4s" }}><div className="fi-dot" style={{ background: "var(--purple)", boxShadow: "0 0 8px var(--purple)" }}></div><p>Decisions become navigable pathways</p></div>
@@ -435,12 +487,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* S5 PRODUCT */}
-          <div className="slide" id="s5">
-            <canvas className="bg-canvas" id="p5"></canvas>
+          {/* S6 PRODUCT */}
+          <div className="slide" id="s6">
+            <canvas className="bg-canvas" id="p6"></canvas>
             <div className="wrap">
               <div className="header">
-                <div className="slide-label">05 / Product</div>
+                <div className="slide-label">06 / Product</div>
                 <div className="slide-title">The <span>Platform</span></div>
               </div>
               <div className="grid">
@@ -516,16 +568,16 @@ export default function Home() {
             </div>
           </div>
 
-          {/* S6 WHY DIFFERENT */}
-          <div className="slide" id="s6">
-            <canvas className="bg-canvas" id="p6"></canvas>
+          {/* S7 WHY DIFFERENT */}
+          <div className="slide" id="s7">
+            <canvas className="bg-canvas" id="p7"></canvas>
             <div className="wrap">
-              <div className="slide-label">06 / Why Different</div>
+              <div className="slide-label">07 / Why Different</div>
               <div className="slide-title">Not a Chatbot. A <span>Decision System.</span></div>
               <div className="table-wrap">
                 <div className="t-head">
                   <div className="t-head-cell lbl">Capability</div>
-                  <div className="t-head-cell trad">❌ Traditional AI</div>
+                  <div className="t-head-cell trad">❌ Generative AI Chatbot</div>
                   <div className="t-head-cell bp">✅ BrainPower AI</div>
                 </div>
                 <div className="t-row highlight-row" style={{ transitionDelay: ".2s" }}>
@@ -554,16 +606,74 @@ export default function Home() {
                   <div className="t-cell bpc">✦ Persistent decision memory</div>
                 </div>
               </div>
-              <div className="verdict">👉 We don't guess — we compute. We don't answer — we reveal futures</div>
+              <div className="verdict">👉 We don't guess, we compute. We don't answer, we reveal futures</div>
             </div>
           </div>
 
-          {/* S7 MARKET */}
-          <div className="slide" id="s7">
-            <canvas className="bg-canvas" id="p7"></canvas>
+          {/* S8 COMPETITIVE POSITIONING */}
+          <div className="slide" id="s8">
+            <canvas className="bg-canvas" id="p8"></canvas>
+            <div className="wrap">
+              <div className="slide-label">08 / Competition</div>
+              <div className="slide-title">Competitive <span>Positioning</span></div>
+              <div className="cmp-wrap">
+                <div className="cmp-head">
+                  <div className="cmp-head-cell name">Vendor</div>
+                  <div className="cmp-head-cell">Reproducibility</div>
+                  <div className="cmp-head-cell">Auditability</div>
+                  <div className="cmp-head-cell">Per-Decision Computation</div>
+                  <div className="cmp-head-cell">3D Exploration</div>
+                </div>
+                <div className="cmp-row us" style={{ transitionDelay: ".25s" }}>
+                  <div className="cmp-cell name us-name">BrainPower AI</div>
+                  <div className="cmp-cell ours">Same inputs, byte-identical output</div>
+                  <div className="cmp-cell ours">Every score traces to a named, approved input</div>
+                  <div className="cmp-cell ours">10,000 seeded Monte Carlo runs per decision</div>
+                  <div className="cmp-cell ours">Futurescape, navigable in 3D</div>
+                </div>
+                <div className="cmp-row" style={{ transitionDelay: ".45s" }}>
+                  <div className="cmp-cell name">Aera Technology</div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                </div>
+                <div className="cmp-row" style={{ transitionDelay: ".7s" }}>
+                  <div className="cmp-cell name"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                </div>
+                <div className="cmp-row" style={{ transitionDelay: ".85s" }}>
+                  <div className="cmp-cell name"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                </div>
+                <div className="cmp-row" style={{ transitionDelay: "1s" }}>
+                  <div className="cmp-cell name"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                </div>
+              </div>
+              <div className="cmp-foot">
+                <div className="cmp-foot-lbl">Our positioning against this field</div>
+                <span className="todo">TODO-FATHI</span>
+                <div className="todo-hint">One honest, specific, defensible line. Nothing about a competitor goes in this table until you have supplied it.</div>
+              </div>
+            </div>
+          </div>
+
+          {/* S9 MARKET */}
+          <div className="slide" id="s9">
+            <canvas className="bg-canvas" id="p9"></canvas>
             <div className="wrap">
               <div className="left">
-                <div className="slide-label">07 / Market Opportunity</div>
+                <div className="slide-label">09 / Market Opportunity</div>
                 <div className="slide-title">Market <span>Opportunity</span></div>
                 <div className="hero-lbl">The Decision Intelligence Market</div>
                 <div className="tags">
@@ -574,24 +684,55 @@ export default function Home() {
                 <ul className="bullets">
                   <li>Beachhead: enterprise strategy teams, consultancies, and PE/VC decision-makers</li>
                   <li>Expanding to any team making high-stakes, high-complexity decisions</li>
-                  <li>Tailwind: rising demand for AI that can be trusted and audited, not just generated</li>
                 </ul>
               </div>
               <div className="right">
-                <div className="vid-box">
-                  <video autoPlay loop muted playsInline>
-                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/DOzAkGhivlmXAIGZ.mp4" type="video/mp4" />
-                  </video>
+                <div className="funnel">
+                  <div className="fn-band tam" style={{ transitionDelay: ".3s" }}>
+                    <div className="fn-tag">TAM</div>
+                    <div className="fn-val">USD 16 to 21 billion</div>
+                    <div className="fn-desc">Global decision intelligence market, 2026</div>
+                    <div className="fn-src">Estimated across major research firms including Grand View Research, Research and Markets, and Fortune Business Insights. Projected CAGRs in the mid to high teens, with forecasts reaching USD 42 to 89 billion by 2030 to 2035 depending on source.</div>
+                  </div>
+                  <div className="fn-band sam" style={{ transitionDelay: ".5s" }}>
+                    <div className="fn-tag">SAM</div>
+                    <div className="fn-val"><span className="todo">TODO-FATHI</span></div>
+                    <div className="fn-desc">Serviceable addressable market. The segment, geography, and buyer we can actually sell into today.</div>
+                  </div>
+                  <div className="fn-band som" style={{ transitionDelay: ".7s" }}>
+                    <div className="fn-tag">SOM</div>
+                    <div className="fn-val"><span className="todo">TODO-FATHI</span></div>
+                    <div className="fn-desc">Serviceable obtainable market. Built bottom up from the calculation below.</div>
+                  </div>
+                </div>
+                <div className="som-calc" style={{ transitionDelay: ".9s" }}>
+                  <div className="som-calc-lbl">Bottom-up SOM calculation</div>
+                  <div className="som-calc-row">
+                    <div className="som-field">
+                      <div className="som-field-lbl">Target firms in beachhead</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                    <div className="som-op">×</div>
+                    <div className="som-field">
+                      <div className="som-field-lbl">Realistic annual contract value</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                    <div className="som-op">=</div>
+                    <div className="som-field res">
+                      <div className="som-field-lbl">Serviceable obtainable market</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* S8 USE CASE */}
-          <div className="slide" id="s8">
-            <canvas className="bg-canvas" id="p8"></canvas>
+          {/* S10 USE CASE */}
+          <div className="slide" id="s10">
+            <canvas className="bg-canvas" id="p10"></canvas>
             <div className="wrap">
-              <div className="slide-label">08 / Use Case</div>
+              <div className="slide-label">10 / Use Case</div>
               <div className="slide-title">Enterprise <span>Strategy Decision</span></div>
               <div className="flow-area">
                 <div className="flow-row">
@@ -616,13 +757,13 @@ export default function Home() {
             </div>
           </div>
 
-          {/* S9 BUSINESS MODEL */}
-          <div className="slide" id="s9">
-            <canvas className="bg-canvas" id="p9"></canvas>
+          {/* S11 BUSINESS MODEL */}
+          <div className="slide" id="s11">
+            <canvas className="bg-canvas" id="p11"></canvas>
             <div className="wrap">
-              <div className="slide-label">09 / Business Model</div>
+              <div className="slide-label">11 / Business Model</div>
               <div className="slide-title">How We <span>Monetize</span></div>
-              <div className="cards s9-cards">
+              <div className="cards s11-cards">
                 <div className="bc" style={{ transitionDelay: ".2s", borderTop: "3px solid var(--purple)" }}>
                   <div className="bc-img"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/lfSJwoMZDYXWEyos.png" alt="SaaS Dashboard" /></div>
                   <div className="bc-icon-wrap" style={{ borderColor: "rgba(108,99,255,.3)", background: "rgba(108,99,255,.1)" }}><span>💎</span></div>
@@ -651,9 +792,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* S10 STAGE */}
-          <div className="slide" id="s10">
-            <canvas className="bg-canvas" id="p10"></canvas>
+          {/* S12 STAGE */}
+          <div className="slide" id="s12">
+            <canvas className="bg-canvas" id="p12"></canvas>
             <div className="bg-vid-frame">
               <video className="bg-vid-inner" autoPlay loop muted playsInline>
                 <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/lVOiupAXAppIoyaM.mp4" type="video/mp4" />
@@ -661,7 +802,7 @@ export default function Home() {
             </div>
             <div className="bg-overlay"></div>
             <div className="wrap">
-              <div className="slide-label">10 / Stage</div>
+              <div className="slide-label">12 / Stage</div>
               <div className="slide-title">Where <span>We Are</span></div>
               <div className="tl-area">
                 <div className="ms-row">
@@ -693,7 +834,7 @@ export default function Home() {
                     <div className="ms-card-label">Launch Target</div>
                   </div>
                   <div className="ms-card" style={{ transitionDelay: ".9s", borderTop: "2px solid var(--muted)" }}>
-                    <div className="ms-card-num" style={{ color: "var(--muted)" }}>$1M–$3M</div>
+                    <div className="ms-card-num" style={{ color: "var(--muted)", fontSize: "26px" }}><span className="todo">TODO-FATHI</span></div>
                     <div className="ms-card-label">Raise Goal</div>
                   </div>
                 </div>
@@ -701,13 +842,50 @@ export default function Home() {
             </div>
           </div>
 
-          {/* S11 TEAM */}
-          <div className="slide" id="s11">
-            <canvas className="bg-canvas" id="p11"></canvas>
+          {/* S13 ACCURACY */}
+          <div className="slide" id="s13">
+            <canvas className="bg-canvas" id="p13"></canvas>
             <div className="wrap">
-              <div className="slide-label">11 / Team</div>
+              <div className="slide-label">13 / Accuracy</div>
+              <div className="slide-title">Consistent Is Not the Same as <span>Correct</span></div>
+              <div className="acc-lede">Reproducibility is the floor, not the claim. Three things stand between a number you can repeat and a number you can defend.</div>
+              <div className="acc-grid">
+                <div className="acc-card" style={{ transitionDelay: ".25s", borderTop: "3px solid var(--purple)" }}>
+                  <div className="acc-icon">🔒</div>
+                  <div className="acc-name">A Sealed Engine</div>
+                  <div className="acc-body">The engine is deliberately sealed. It cannot reach outside itself to pull hidden data while it computes, so nothing enters a score that was not put there deliberately.</div>
+                  <div className="acc-tag" style={{ color: "var(--purple)", borderColor: "rgba(108,99,255,.4)", background: "rgba(108,99,255,.1)" }}>NO HIDDEN INPUTS</div>
+                </div>
+                <div className="acc-card" style={{ transitionDelay: ".45s", borderTop: "3px solid var(--cyan)" }}>
+                  <div className="acc-icon">📋</div>
+                  <div className="acc-name">An Approved Assumption Register</div>
+                  <div className="acc-body">Assumptions enter only through a named, approved register. Every assumption behind a number is visible, and can be challenged on its own terms rather than argued about in the abstract.</div>
+                  <div className="acc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.4)", background: "rgba(0,212,255,.1)" }}>EVERY INPUT NAMED</div>
+                </div>
+                <div className="acc-card" style={{ transitionDelay: ".65s", borderTop: "3px solid var(--green)" }}>
+                  <div className="acc-icon">🎯</div>
+                  <div className="acc-name">Brier Calibration</div>
+                  <div className="acc-body">As decisions resolve, Brier calibration scores the engine’s own predictions against what actually happened. Correctness gets measured against reality over time. It is not asserted up front.</div>
+                  <div className="acc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.4)", background: "rgba(0,255,136,.1)" }}>SCORED ON OUTCOMES</div>
+                </div>
+              </div>
+              <div className="acc-evidence">
+                <div className="acc-ev-left">
+                  <div className="acc-ev-lbl">Back-test evidence</div>
+                  <div className="acc-ev-note">No completed back-test and no accuracy figure is claimed at this stage. This is where that evidence goes once it exists.</div>
+                </div>
+                <span className="todo">TODO-FATHI</span>
+              </div>
+            </div>
+          </div>
+
+          {/* S14 TEAM */}
+          <div className="slide" id="s14">
+            <canvas className="bg-canvas" id="p14"></canvas>
+            <div className="wrap">
+              <div className="slide-label">14 / Team</div>
               <div className="slide-title">The People <span>Behind It</span></div>
-              <div className="cards s11-cards">
+              <div className="cards s14-cards">
                 <div className="tc" style={{ transitionDelay: ".2s", borderTop: "3px solid var(--purple)" }}>
                   <div className="tc-photo-wrap">
                     <img className="tc-photo" src="https://storage.googleapis.com/runable-templates/cli-uploads%2FkOpJh1WBUGnPVSjlrlo8fC67KBLFJQuR%2FgtOmY8nlZgG8-oddX9bf6%2FFathi_3__4j-ILf.png" style={{ borderColor: "var(--purple)", boxShadow: "0 0 24px rgba(108,99,255,.4)" }} alt="Fathi" />
@@ -716,6 +894,16 @@ export default function Home() {
                   <div className="tc-name">Fathi Al Riyami</div>
                   <div className="tc-role" style={{ color: "var(--purple)", borderColor: "var(--purple)", background: "rgba(108,99,255,.1)" }}>Founder &amp; CEO</div>
                   <div className="tc-bio">AI, systems &amp; product vision. Driving the decision intelligence platform from concept to market reality.</div>
+                  <div className="tc-creds">
+                    <div className="tc-cred">
+                      <div className="tc-cred-lbl">Prior companies</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                    <div className="tc-cred">
+                      <div className="tc-cred-lbl">Track record</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                  </div>
                   <div className="tc-expertise"><span className="tc-tag">AI Systems</span><span className="tc-tag">Product</span><span className="tc-tag">Vision</span></div>
                 </div>
                 <div className="tc" style={{ transitionDelay: ".4s", borderTop: "3px solid var(--cyan)" }}>
@@ -726,6 +914,16 @@ export default function Home() {
                   <div className="tc-name">Taimur Al Said</div>
                   <div className="tc-role" style={{ color: "var(--cyan)", borderColor: "var(--cyan)", background: "rgba(0,212,255,.1)" }}>Chief of Staff</div>
                   <div className="tc-bio">Operations &amp; high-stakes decision environments. Aviation industry expertise in mission-critical execution.</div>
+                  <div className="tc-creds">
+                    <div className="tc-cred">
+                      <div className="tc-cred-lbl">Prior companies</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                    <div className="tc-cred">
+                      <div className="tc-cred-lbl">Track record</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                  </div>
                   <div className="tc-expertise"><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Operations</span><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Aviation</span><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Execution</span></div>
                 </div>
                 <div className="tc" style={{ transitionDelay: ".6s", borderTop: "3px solid var(--green)" }}>
@@ -736,18 +934,36 @@ export default function Home() {
                   <div className="tc-name">Dragos Silion</div>
                   <div className="tc-role" style={{ color: "var(--green)", borderColor: "var(--green)", background: "rgba(0,255,136,.1)" }}>Chief Data/AI Officer</div>
                   <div className="tc-bio">XR &amp; immersive systems expert. Powers the 3D visualization layer and the core AI architecture.</div>
+                  <div className="tc-creds">
+                    <div className="tc-cred">
+                      <div className="tc-cred-lbl">Prior companies</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                    <div className="tc-cred">
+                      <div className="tc-cred-lbl">Track record</div>
+                      <span className="todo">TODO-FATHI</span>
+                    </div>
+                  </div>
                   <div className="tc-expertise"><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>XR/3D</span><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>AI Arch</span><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>Data</span></div>
+                </div>
+              </div>
+              <div className="advisors">
+                <div className="adv-lbl">Advisors</div>
+                <div className="adv-row">
+                  <div className="adv-slot"><span className="todo">TODO-FATHI</span><div className="adv-hint">Name, affiliation, what they actually advise on</div></div>
+                  <div className="adv-slot"><span className="todo">TODO-FATHI</span><div className="adv-hint">Name, affiliation, what they actually advise on</div></div>
+                  <div className="adv-slot"><span className="todo">TODO-FATHI</span><div className="adv-hint">Name, affiliation, what they actually advise on</div></div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* S12 VISION */}
-          <div className="slide" id="s12">
-            <canvas className="bg-canvas" id="p12"></canvas>
+          {/* S15 VISION */}
+          <div className="slide" id="s15">
+            <canvas className="bg-canvas" id="p15"></canvas>
             <div className="wrap">
               <div className="left">
-                <div className="slide-label">12 / Vision</div>
+                <div className="slide-label">15 / Vision</div>
                 <div className="headline">To Become the<br /><span>Default System</span><br />for Decision-Making</div>
                 <div className="pillars">
                   <div className="pi" style={{ transitionDelay: ".4s" }}><div className="pi-icon">🔢</div><div className="pi-text">Every Number is Computed</div></div>
@@ -761,15 +977,25 @@ export default function Home() {
             </div>
           </div>
 
-          {/* S13 INVESTMENT */}
-          <div className="slide" id="s13">
-            <canvas className="bg-canvas" id="p13"></canvas>
+          {/* S16 THE ASK */}
+          <div className="slide" id="s16">
+            <canvas className="bg-canvas" id="p16"></canvas>
             <div className="wrap">
               <div className="left">
-                <div className="slide-label">13 / Investment</div>
-                <div className="slide-title">Investment <span>Opportunity</span></div>
-                <div className="raise">$1M–$3M</div>
+                <div className="slide-label">16 / The Ask</div>
+                <div className="slide-title">The <span>Ask</span></div>
+                <div className="raise"><span className="todo">TODO-FATHI</span></div>
                 <div className="raise-lbl">PRE-SEED ROUND</div>
+                <div className="ask-terms">
+                  <div className="ask-term">
+                    <div className="ask-term-lbl">Instrument</div>
+                    <span className="todo">TODO-FATHI</span>
+                  </div>
+                  <div className="ask-term">
+                    <div className="ask-term-lbl">Valuation or cap</div>
+                    <span className="todo">TODO-FATHI</span>
+                  </div>
+                </div>
                 <div className="uses">
                   <div className="ui" style={{ transitionDelay: ".6s" }}>
                     <div className="ui-labels">Product Development <span style={{ color: "var(--purple)" }}>45%</span></div>
@@ -787,18 +1013,41 @@ export default function Home() {
                 </div>
               </div>
               <div className="right">
-                <div className="vid-wrap">
-                  <video autoPlay loop muted playsInline>
-                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/IfCTBWbReCoCAqyy.mp4" type="video/mp4" />
-                  </video>
+                <div className="plan">
+                  <div className="plan-hd">What this buys, over 18 months</div>
+                  <div className="plan-rail"></div>
+                  <div className="plan-step" style={{ transitionDelay: ".4s" }}>
+                    <div className="plan-dot"></div>
+                    <div className="plan-body">
+                      <div className="plan-when">Months 0 to 6</div>
+                      <span className="todo">TODO-FATHI</span>
+                      <div className="todo-hint">The milestone, and the measurable test that says it was hit.</div>
+                    </div>
+                  </div>
+                  <div className="plan-step" style={{ transitionDelay: ".6s" }}>
+                    <div className="plan-dot"></div>
+                    <div className="plan-body">
+                      <div className="plan-when">Months 6 to 12</div>
+                      <span className="todo">TODO-FATHI</span>
+                      <div className="todo-hint">The milestone, and the measurable test that says it was hit.</div>
+                    </div>
+                  </div>
+                  <div className="plan-step" style={{ transitionDelay: ".8s" }}>
+                    <div className="plan-dot"></div>
+                    <div className="plan-body">
+                      <div className="plan-when">Months 12 to 18</div>
+                      <span className="todo">TODO-FATHI</span>
+                      <div className="todo-hint">The milestone that makes the next round raisable.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* S14 CLOSING */}
-          <div className="slide" id="s14">
-            <canvas className="bg-canvas" id="p14"></canvas>
+          {/* S17 CLOSING */}
+          <div className="slide" id="s17">
+            <canvas className="bg-canvas" id="p17"></canvas>
             <div className="wrap">
               <div className="brand-lbl">BRAINPOWER AI</div>
               <div className="from">From Thinking</div>
@@ -822,7 +1071,7 @@ export default function Home() {
         <div id="nav-handle" title="Drag to move">⋮⋮</div>
         <button onClick={() => (window as any).navPrev()}>‹</button>
         <div id="dots"></div>
-        <span id="counter">1 / 14</span>
+        <span id="counter">1 / 17</span>
         <button onClick={() => (window as any).navNext()}>›</button>
       </div>
       <button id="fullscreen-btn" onClick={() => (window as any).toggleFS()} title="Fullscreen">⛶</button>
