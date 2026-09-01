@@ -312,8 +312,10 @@ export default function Home() {
           position: "fixed",
           top: "16px",
           // Right-aligned. The slide labels ("07 / Market Opportunity") sit top
-          // left, so this keeps the two off each other.
-          right: "16px",
+          // left, so this keeps the two off each other. Offset clears the
+          // fullscreen button (38px wide at right:18px), which has a higher
+          // z-index and would otherwise paint over the end of the label.
+          right: "66px",
           zIndex: 200,
           display: "inline-flex",
           alignItems: "center",
