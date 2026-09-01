@@ -180,7 +180,7 @@ export default function Home() {
     }
     function i9() {
       stagger("#s9 .fn-band", "vis", 300, 200);
-      setTimeout(() => document.querySelectorAll("#s9 .som-calc").forEach((e) => e.classList.add("vis")), 900);
+      setTimeout(() => document.querySelectorAll("#s9 .mkt-facts").forEach((e) => e.classList.add("vis")), 900);
     }
     function i10() {
       stagger("#s10 .fs", "vis", 150, 200);
@@ -188,19 +188,8 @@ export default function Home() {
       stagger("#s10 .oc", "vis", 1100, 120);
     }
     function i11() {
-      stagger("#s11 .bc", "vis", 200, 200);
-      setTimeout(() => {
-        document.querySelectorAll("#s11 .bc-num[data-target]").forEach((el) => {
-          const target = parseInt((el as HTMLElement).dataset.target || "0");
-          let v = 0;
-          const step = Math.ceil(target / 60);
-          const t = setInterval(() => {
-            v = Math.min(v + step, target);
-            el.textContent = v.toLocaleString();
-            if (v >= target) clearInterval(t);
-          }, 30);
-        });
-      }, 800);
+      stagger("#s11 .pt", "vis", 200, 130);
+      setTimeout(() => document.querySelectorAll("#s11 .plad-foot").forEach((e) => e.classList.add("vis")), 1100);
     }
     function i12() {
       stagger("#s12 .ms", "vis", 200, 200);
@@ -219,7 +208,6 @@ export default function Home() {
     }
     function i14() {
       stagger("#s14 .tc", "vis", 200, 200);
-      setTimeout(() => document.querySelectorAll("#s14 .advisors").forEach((e) => e.classList.add("vis")), 900);
     }
     function i15() { stagger("#s15 .pi", "vis", 350, 200); }
     function i16() {
@@ -572,37 +560,38 @@ export default function Home() {
           <div className="slide" id="s7">
             <canvas className="bg-canvas" id="p7"></canvas>
             <div className="wrap">
-              <div className="slide-label">07 / Why Different</div>
-              <div className="slide-title">Not a Chatbot. A <span>Decision System.</span></div>
+              <div className="slide-label">07 / Our Approach</div>
+              <div className="slide-title">How We Differ from <span>Generic AI</span></div>
+              <div className="s7-lead">Generic AI is built to generate language. BrainPower is built to compute decisions. This is a difference in architecture, not a comparison of vendors.</div>
               <div className="table-wrap">
                 <div className="t-head">
                   <div className="t-head-cell lbl">Capability</div>
-                  <div className="t-head-cell trad">❌ Generative AI Chatbot</div>
-                  <div className="t-head-cell bp">✅ BrainPower AI</div>
+                  <div className="t-head-cell trad">Generic AI Assistants</div>
+                  <div className="t-head-cell bp">The BrainPower Approach</div>
                 </div>
                 <div className="t-row highlight-row" style={{ transitionDelay: ".2s" }}>
                   <div className="t-cell feat">🔢 Number Trust</div>
-                  <div className="t-cell trd">Guesses its numbers (vary each run)</div>
-                  <div className="t-cell bpc">✦ Computes every number (reproducible &amp; auditable)</div>
+                  <div className="t-cell trd">Generates numbers probabilistically, so they vary between runs</div>
+                  <div className="t-cell bpc">✦ Computes every number, reproducible and auditable</div>
                 </div>
                 <div className="t-row" style={{ transitionDelay: ".4s" }}>
                   <div className="t-cell feat">🎯 Core Function</div>
-                  <div className="t-cell trd">Answers questions</div>
-                  <div className="t-cell bpc">✦ Structures decisions</div>
+                  <div className="t-cell trd">Built to answer questions</div>
+                  <div className="t-cell bpc">✦ Built to structure decisions</div>
                 </div>
                 <div className="t-row" style={{ transitionDelay: ".6s" }}>
                   <div className="t-cell feat">📺 Output Format</div>
-                  <div className="t-cell trd">Plain text output</div>
-                  <div className="t-cell bpc">✦ Interactive 3D simulation</div>
+                  <div className="t-cell trd">Returns text</div>
+                  <div className="t-cell bpc">✦ Returns an interactive 3D simulation</div>
                 </div>
                 <div className="t-row" style={{ transitionDelay: ".8s" }}>
                   <div className="t-cell feat">🔭 Outcome Visibility</div>
-                  <div className="t-cell trd">No visibility</div>
-                  <div className="t-cell bpc">✦ Explore futures before deciding</div>
+                  <div className="t-cell trd">Describes options in prose</div>
+                  <div className="t-cell bpc">✦ Lets you explore futures before deciding</div>
                 </div>
                 <div className="t-row" style={{ transitionDelay: "1s" }}>
                   <div className="t-cell feat">🧠 Memory &amp; Context</div>
-                  <div className="t-cell trd">No continuity</div>
+                  <div className="t-cell trd">Each session starts fresh</div>
                   <div className="t-cell bpc">✦ Persistent decision memory</div>
                 </div>
               </div>
@@ -615,55 +604,38 @@ export default function Home() {
             <canvas className="bg-canvas" id="p8"></canvas>
             <div className="wrap">
               <div className="slide-label">08 / Competition</div>
-              <div className="slide-title">Competitive <span>Positioning</span></div>
+              <div className="slide-title">Competitive <span>Landscape</span></div>
+              <div className="cmp-lead">The decision intelligence space has real incumbents. Here is where BrainPower fits.</div>
               <div className="cmp-wrap">
                 <div className="cmp-head">
-                  <div className="cmp-head-cell name">Vendor</div>
-                  <div className="cmp-head-cell">Reproducibility</div>
-                  <div className="cmp-head-cell">Auditability</div>
-                  <div className="cmp-head-cell">Per-Decision Computation</div>
-                  <div className="cmp-head-cell">3D Exploration</div>
+                  <div className="cmp-head-cell name">Category</div>
+                  <div className="cmp-head-cell">Players</div>
+                  <div className="cmp-head-cell">The gap BrainPower fills</div>
                 </div>
-                <div className="cmp-row us" style={{ transitionDelay: ".25s" }}>
-                  <div className="cmp-cell name us-name">BrainPower AI</div>
-                  <div className="cmp-cell ours">Same inputs, byte-identical output</div>
-                  <div className="cmp-cell ours">Every score traces to a named, approved input</div>
-                  <div className="cmp-cell ours">10,000 seeded Monte Carlo runs per decision</div>
-                  <div className="cmp-cell ours">Futurescape, navigable in 3D</div>
+                <div className="cmp-row" style={{ transitionDelay: ".25s" }}>
+                  <div className="cmp-cell name">Enterprise decision intelligence</div>
+                  <div className="cmp-cell players">Palantir Foundry, Aera Technology, Quantexa</div>
+                  <div className="cmp-cell gap">Heavy, costly, built for data teams. Not reproducible scenario computation a strategist runs directly.</div>
                 </div>
                 <div className="cmp-row" style={{ transitionDelay: ".45s" }}>
-                  <div className="cmp-cell name">Aera Technology</div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell name">Scenario planning</div>
+                  <div className="cmp-cell players">Pigment, Anaplan, Board, Causal</div>
+                  <div className="cmp-cell gap">Spreadsheet-descended, flat outputs. No probabilistic simulation, no visual scenario exploration.</div>
                 </div>
-                <div className="cmp-row" style={{ transitionDelay: ".7s" }}>
-                  <div className="cmp-cell name"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                <div className="cmp-row" style={{ transitionDelay: ".65s" }}>
+                  <div className="cmp-cell name">Simulation and analytics</div>
+                  <div className="cmp-cell players">SAS, Palisade @RISK, Excel add-ins</div>
+                  <div className="cmp-cell gap">Excel is the real incumbent: powerful but opaque, single-user, no shared auditable engine, no 3D.</div>
                 </div>
                 <div className="cmp-row" style={{ transitionDelay: ".85s" }}>
-                  <div className="cmp-cell name"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                </div>
-                <div className="cmp-row" style={{ transitionDelay: "1s" }}>
-                  <div className="cmp-cell name"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
-                  <div className="cmp-cell"><span className="todo">TODO-FATHI</span></div>
+                  <div className="cmp-cell name">Strategy consultancies</div>
+                  <div className="cmp-cell players">McKinsey, BCG, Bain</div>
+                  <div className="cmp-cell gap">Slow, expensive, not reproducible. A deliverable, not a system the team can rerun.</div>
                 </div>
               </div>
               <div className="cmp-foot">
-                <div className="cmp-foot-lbl">Our positioning against this field</div>
-                <span className="todo">TODO-FATHI</span>
-                <div className="todo-hint">One honest, specific, defensible line. Nothing about a competitor goes in this table until you have supplied it.</div>
+                <div className="cmp-foot-lbl">The wedge</div>
+                <div className="cmp-foot-txt">A deterministic engine that computes every number reproducibly, combined with 3D scenario exploration. Reproducible plus auditable plus visual is a combination none of the incumbents own cleanly.</div>
               </div>
             </div>
           </div>
@@ -682,45 +654,42 @@ export default function Home() {
                   <div className="tpill g">Simulation</div>
                 </div>
                 <ul className="bullets">
+                  <li>An analyst recognized category with real, independently published sizing</li>
+                  <li>North America leads at roughly 44 percent of the market</li>
+                  <li>Growth driven by demand for AI that is explainable and auditable, not just generative</li>
                   <li>Beachhead: enterprise strategy teams, consultancies, and PE/VC decision-makers</li>
-                  <li>Expanding to any team making high-stakes, high-complexity decisions</li>
+                  <li>Reached through tiered SaaS from $15 per month to enterprise, plus enterprise licensing</li>
                 </ul>
               </div>
               <div className="right">
-                <div className="funnel">
+                <div className="funnel growth">
                   <div className="fn-band tam" style={{ transitionDelay: ".3s" }}>
-                    <div className="fn-tag">TAM</div>
+                    <div className="fn-tag">2026 MARKET</div>
                     <div className="fn-val">USD 16 to 21 billion</div>
-                    <div className="fn-desc">Global decision intelligence market, 2026</div>
-                    <div className="fn-src">Estimated across major research firms including Grand View Research, Research and Markets, and Fortune Business Insights. Projected CAGRs in the mid to high teens, with forecasts reaching USD 42 to 89 billion by 2030 to 2035 depending on source.</div>
+                    <div className="fn-desc">Global decision intelligence market today</div>
                   </div>
                   <div className="fn-band sam" style={{ transitionDelay: ".5s" }}>
-                    <div className="fn-tag">SAM</div>
-                    <div className="fn-val"><span className="todo">TODO-FATHI</span></div>
-                    <div className="fn-desc">Serviceable addressable market. The segment, geography, and buyer we can actually sell into today.</div>
+                    <div className="fn-tag">ANNUAL GROWTH</div>
+                    <div className="fn-val">15 to 25 percent</div>
+                    <div className="fn-desc">Compound annual growth rate across major forecasts</div>
                   </div>
                   <div className="fn-band som" style={{ transitionDelay: ".7s" }}>
-                    <div className="fn-tag">SOM</div>
-                    <div className="fn-val"><span className="todo">TODO-FATHI</span></div>
-                    <div className="fn-desc">Serviceable obtainable market. Built bottom up from the calculation below.</div>
+                    <div className="fn-tag">EARLY 2030s</div>
+                    <div className="fn-val">USD 42 to 55 billion</div>
+                    <div className="fn-desc">Projected market size on current growth</div>
+                    <div className="fn-src">Sources: Grand View Research, MarketsandMarkets, and Precedence Research.</div>
                   </div>
                 </div>
-                <div className="som-calc" style={{ transitionDelay: ".9s" }}>
-                  <div className="som-calc-lbl">Bottom-up SOM calculation</div>
-                  <div className="som-calc-row">
-                    <div className="som-field">
-                      <div className="som-field-lbl">Target firms in beachhead</div>
-                      <span className="todo">TODO-FATHI</span>
+                <div className="mkt-facts" style={{ transitionDelay: ".9s" }}>
+                  <div className="mkt-facts-lbl">What drives the growth</div>
+                  <div className="mkt-facts-row">
+                    <div className="mkt-fact">
+                      <div className="mkt-fact-val">44%</div>
+                      <div className="mkt-fact-lbl">North America share, the leading region</div>
                     </div>
-                    <div className="som-op">×</div>
-                    <div className="som-field">
-                      <div className="som-field-lbl">Realistic annual contract value</div>
-                      <span className="todo">TODO-FATHI</span>
-                    </div>
-                    <div className="som-op">=</div>
-                    <div className="som-field res">
-                      <div className="som-field-lbl">Serviceable obtainable market</div>
-                      <span className="todo">TODO-FATHI</span>
+                    <div className="mkt-fact">
+                      <div className="mkt-fact-val">Explainable</div>
+                      <div className="mkt-fact-lbl">Demand is for AI that is auditable, not just generative</div>
                     </div>
                   </div>
                 </div>
@@ -763,31 +732,43 @@ export default function Home() {
             <div className="wrap">
               <div className="slide-label">11 / Business Model</div>
               <div className="slide-title">How We <span>Monetize</span></div>
-              <div className="cards s11-cards">
-                <div className="bc" style={{ transitionDelay: ".2s", borderTop: "3px solid var(--purple)" }}>
-                  <div className="bc-img"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/lfSJwoMZDYXWEyos.png" alt="SaaS Dashboard" /></div>
-                  <div className="bc-icon-wrap" style={{ borderColor: "rgba(108,99,255,.3)", background: "rgba(108,99,255,.1)" }}><span>💎</span></div>
-
-                  <div className="bc-name">SaaS Subscriptions</div>
-                  <div className="bc-desc">Monthly &amp; annual plans for teams and individuals. Tiered pricing scales from solo thinkers to full enterprises.</div>
-                  <div className="bc-tag core">CORE REVENUE</div>
+              <div className="plad-lbl">Tiered SaaS subscriptions, individual to enterprise</div>
+              <div className="plad">
+                <div className="pt" style={{ transitionDelay: ".15s" }}>
+                  <div className="pt-name">Individual</div>
+                  <div className="pt-price">$15<span>/mo</span></div>
+                  <div className="pt-desc">Entry to decision intelligence</div>
                 </div>
-                <div className="bc" style={{ transitionDelay: ".4s", borderTop: "3px solid var(--cyan)" }}>
-                  <div className="bc-img"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/FmRvhUSUpwGMNNZN.png" alt="Enterprise Hub" /></div>
-                  <div className="bc-icon-wrap" style={{ borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.1)" }}><span>🏢</span></div>
-
-                  <div className="bc-name">Enterprise Licensing</div>
-                  <div className="bc-desc">Custom deployments for large organizations. White-label options, dedicated infrastructure, and priority support.</div>
-                  <div className="bc-tag high">HIGH VALUE</div>
+                <div className="pt" style={{ transitionDelay: ".28s" }}>
+                  <div className="pt-name">Advanced</div>
+                  <div className="pt-price">$24<span>/mo</span></div>
+                  <div className="pt-desc">Regular high-stakes decisions</div>
                 </div>
-                <div className="bc" style={{ transitionDelay: ".6s", borderTop: "3px solid var(--green)" }}>
-                  <div className="bc-img"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029149863/YgbVJdOqlfIvJxSr.png" alt="API Connector Hub" /></div>
-                  <div className="bc-icon-wrap" style={{ borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.1)" }}><span>🔌</span></div>
-
-                  <div className="bc-name">Integrations &amp; Modules</div>
-                  <div className="bc-desc">API access, premium simulation layers, and add-on modules for specialized sectors and industry verticals.</div>
-                  <div className="bc-tag fut">FUTURE</div>
+                <div className="pt pop" style={{ transitionDelay: ".41s" }}>
+                  <div className="pt-badge">MOST POPULAR</div>
+                  <div className="pt-name">Pro</div>
+                  <div className="pt-price">$72<span>/mo</span></div>
+                  <div className="pt-desc">Senior decision-makers</div>
                 </div>
+                <div className="pt" style={{ transitionDelay: ".54s" }}>
+                  <div className="pt-name">Executive</div>
+                  <div className="pt-price">$144<span>/mo</span></div>
+                  <div className="pt-desc">Executives and founders</div>
+                </div>
+                <div className="pt" style={{ transitionDelay: ".67s" }}>
+                  <div className="pt-name">Team</div>
+                  <div className="pt-price">$360<span>/mo</span></div>
+                  <div className="pt-desc">Leadership teams</div>
+                </div>
+                <div className="pt ent" style={{ transitionDelay: ".8s" }}>
+                  <div className="pt-name">Enterprise</div>
+                  <div className="pt-price">Custom</div>
+                  <div className="pt-desc">Dedicated onboarding, SSO, and SLA</div>
+                </div>
+              </div>
+              <div className="plad-foot">
+                <div className="plad-foot-lbl">Beyond subscriptions</div>
+                <div className="plad-foot-txt">Enterprise licensing and integrations for organizations with complex decision environments.</div>
               </div>
             </div>
           </div>
@@ -893,18 +874,8 @@ export default function Home() {
                   </div>
                   <div className="tc-name">Fathi Al Riyami</div>
                   <div className="tc-role" style={{ color: "var(--purple)", borderColor: "var(--purple)", background: "rgba(108,99,255,.1)" }}>Founder &amp; CEO</div>
-                  <div className="tc-bio">AI, systems &amp; product vision. Driving the decision intelligence platform from concept to market reality.</div>
-                  <div className="tc-creds">
-                    <div className="tc-cred">
-                      <div className="tc-cred-lbl">Prior companies</div>
-                      <span className="todo">TODO-FATHI</span>
-                    </div>
-                    <div className="tc-cred">
-                      <div className="tc-cred-lbl">Track record</div>
-                      <span className="todo">TODO-FATHI</span>
-                    </div>
-                  </div>
-                  <div className="tc-expertise"><span className="tc-tag">AI Systems</span><span className="tc-tag">Product</span><span className="tc-tag">Vision</span></div>
+                  <div className="tc-bio">Deep background in interactive technology, with delivered solutions for oil and gas clients through CSB. Leads AI, systems, and product.</div>
+                  <div className="tc-expertise"><span className="tc-tag">AI Systems</span><span className="tc-tag">Product</span><span className="tc-tag">Interactive Tech</span></div>
                 </div>
                 <div className="tc" style={{ transitionDelay: ".4s", borderTop: "3px solid var(--cyan)" }}>
                   <div className="tc-photo-wrap">
@@ -913,18 +884,8 @@ export default function Home() {
                   </div>
                   <div className="tc-name">Taimur Al Said</div>
                   <div className="tc-role" style={{ color: "var(--cyan)", borderColor: "var(--cyan)", background: "rgba(0,212,255,.1)" }}>Chief of Staff</div>
-                  <div className="tc-bio">Operations &amp; high-stakes decision environments. Aviation industry expertise in mission-critical execution.</div>
-                  <div className="tc-creds">
-                    <div className="tc-cred">
-                      <div className="tc-cred-lbl">Prior companies</div>
-                      <span className="todo">TODO-FATHI</span>
-                    </div>
-                    <div className="tc-cred">
-                      <div className="tc-cred-lbl">Track record</div>
-                      <span className="todo">TODO-FATHI</span>
-                    </div>
-                  </div>
-                  <div className="tc-expertise"><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Operations</span><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Aviation</span><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Execution</span></div>
+                  <div className="tc-bio">Leads strategic partnerships and high-level relationships.</div>
+                  <div className="tc-expertise"><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Partnerships</span><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Strategy</span><span className="tc-tag" style={{ color: "var(--cyan)", borderColor: "rgba(0,212,255,.3)", background: "rgba(0,212,255,.08)" }}>Relationships</span></div>
                 </div>
                 <div className="tc" style={{ transitionDelay: ".6s", borderTop: "3px solid var(--green)" }}>
                   <div className="tc-photo-wrap">
@@ -932,27 +893,9 @@ export default function Home() {
                     <div className="tc-ring" style={{ borderColor: "var(--green)" }}></div>
                   </div>
                   <div className="tc-name">Dragos Silion</div>
-                  <div className="tc-role" style={{ color: "var(--green)", borderColor: "var(--green)", background: "rgba(0,255,136,.1)" }}>Chief Data/AI Officer</div>
-                  <div className="tc-bio">XR &amp; immersive systems expert. Powers the 3D visualization layer and the core AI architecture.</div>
-                  <div className="tc-creds">
-                    <div className="tc-cred">
-                      <div className="tc-cred-lbl">Prior companies</div>
-                      <span className="todo">TODO-FATHI</span>
-                    </div>
-                    <div className="tc-cred">
-                      <div className="tc-cred-lbl">Track record</div>
-                      <span className="todo">TODO-FATHI</span>
-                    </div>
-                  </div>
-                  <div className="tc-expertise"><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>XR/3D</span><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>AI Arch</span><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>Data</span></div>
-                </div>
-              </div>
-              <div className="advisors">
-                <div className="adv-lbl">Advisors</div>
-                <div className="adv-row">
-                  <div className="adv-slot"><span className="todo">TODO-FATHI</span><div className="adv-hint">Name, affiliation, what they actually advise on</div></div>
-                  <div className="adv-slot"><span className="todo">TODO-FATHI</span><div className="adv-hint">Name, affiliation, what they actually advise on</div></div>
-                  <div className="adv-slot"><span className="todo">TODO-FATHI</span><div className="adv-hint">Name, affiliation, what they actually advise on</div></div>
+                  <div className="tc-role" style={{ color: "var(--green)", borderColor: "var(--green)", background: "rgba(0,255,136,.1)" }}>Chief Data and AI Officer</div>
+                  <div className="tc-bio">End-to-end AR/VR/XR immersive projects across tourism, arts, education, and advertising. Pursuing a PhD in XR digitization for large institutions, focused on NeRF and Gaussian Splatting. Founder of ArtLink, a platform for creating AR experiences for artists and cultural institutions.</div>
+                  <div className="tc-expertise"><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>XR/3D</span><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>NeRF</span><span className="tc-tag" style={{ color: "var(--green)", borderColor: "rgba(0,255,136,.3)", background: "rgba(0,255,136,.08)" }}>Gaussian Splatting</span></div>
                 </div>
               </div>
             </div>
@@ -984,60 +927,70 @@ export default function Home() {
               <div className="left">
                 <div className="slide-label">16 / The Ask</div>
                 <div className="slide-title">The <span>Ask</span></div>
-                <div className="raise"><span className="todo">TODO-FATHI</span></div>
+                <div className="raise">$1.5M</div>
                 <div className="raise-lbl">PRE-SEED ROUND</div>
                 <div className="ask-terms">
                   <div className="ask-term">
                     <div className="ask-term-lbl">Instrument</div>
-                    <span className="todo">TODO-FATHI</span>
+                    <div className="ask-term-val">SAFE</div>
                   </div>
                   <div className="ask-term">
-                    <div className="ask-term-lbl">Valuation or cap</div>
-                    <span className="todo">TODO-FATHI</span>
+                    <div className="ask-term-lbl">Valuation cap</div>
+                    <div className="ask-term-val">$8M</div>
+                  </div>
+                  <div className="ask-term">
+                    <div className="ask-term-lbl">Runway</div>
+                    <div className="ask-term-val">24 months</div>
                   </div>
                 </div>
                 <div className="uses">
                   <div className="ui" style={{ transitionDelay: ".6s" }}>
-                    <div className="ui-labels">Product Development <span style={{ color: "var(--purple)" }}>45%</span></div>
-                    <div className="ui-sublabel">Hardening, security, enterprise readiness</div>
+                    <div className="ui-labels">Product and Engineering <span style={{ color: "var(--purple)" }}>45%</span></div>
+                    <div className="ui-sublabel">Upgrade and enhance the engine with more sophisticated engineering, deepen the product layers</div>
                     <div className="ui-bg"><div className="ui-fill" data-w="45%" style={{ background: "linear-gradient(90deg,var(--purple),#9f7aea)", boxShadow: "0 0 8px rgba(108,99,255,.4)" }}></div></div>
                   </div>
                   <div className="ui" style={{ transitionDelay: ".8s" }}>
-                    <div className="ui-labels">Simulation &amp; 3D Layer <span style={{ color: "var(--cyan)" }}>25%</span></div>
+                    <div className="ui-labels">Simulation and 3D <span style={{ color: "var(--cyan)" }}>25%</span></div>
+                    <div className="ui-sublabel">Advance the computation and scenario visualization</div>
                     <div className="ui-bg"><div className="ui-fill" data-w="25%" style={{ background: "linear-gradient(90deg,var(--cyan),#0099cc)", boxShadow: "0 0 8px rgba(0,212,255,.4)" }}></div></div>
                   </div>
                   <div className="ui" style={{ transitionDelay: "1s" }}>
                     <div className="ui-labels">Go-to-Market <span style={{ color: "var(--green)" }}>30%</span></div>
+                    <div className="ui-sublabel">Reach enterprise strategy teams, consultancies, and PE/VC decision-makers</div>
                     <div className="ui-bg"><div className="ui-fill" data-w="30%" style={{ background: "linear-gradient(90deg,var(--green),#00aa55)", boxShadow: "0 0 8px rgba(0,255,136,.4)" }}></div></div>
                   </div>
                 </div>
               </div>
               <div className="right">
                 <div className="plan">
-                  <div className="plan-hd">What this buys, over 18 months</div>
+                  <div className="plan-hd">What this buys, over 24 months</div>
                   <div className="plan-rail"></div>
                   <div className="plan-step" style={{ transitionDelay: ".4s" }}>
                     <div className="plan-dot"></div>
                     <div className="plan-body">
                       <div className="plan-when">Months 0 to 6</div>
-                      <span className="todo">TODO-FATHI</span>
-                      <div className="todo-hint">The milestone, and the measurable test that says it was hit.</div>
+                      <div className="plan-txt">Enhance the product and simulation layers</div>
                     </div>
                   </div>
                   <div className="plan-step" style={{ transitionDelay: ".6s" }}>
                     <div className="plan-dot"></div>
                     <div className="plan-body">
                       <div className="plan-when">Months 6 to 12</div>
-                      <span className="todo">TODO-FATHI</span>
-                      <div className="todo-hint">The milestone, and the measurable test that says it was hit.</div>
+                      <div className="plan-txt">Validate the engine through back-testing against real decisions with known outcomes</div>
                     </div>
                   </div>
                   <div className="plan-step" style={{ transitionDelay: ".8s" }}>
                     <div className="plan-dot"></div>
                     <div className="plan-body">
                       <div className="plan-when">Months 12 to 18</div>
-                      <span className="todo">TODO-FATHI</span>
-                      <div className="todo-hint">The milestone that makes the next round raisable.</div>
+                      <div className="plan-txt">Launch commercially to the enterprise beachhead</div>
+                    </div>
+                  </div>
+                  <div className="plan-step" style={{ transitionDelay: "1s" }}>
+                    <div className="plan-dot"></div>
+                    <div className="plan-body">
+                      <div className="plan-when">Months 18 to 24</div>
+                      <div className="plan-txt">Reach initial paying customers and revenue</div>
                     </div>
                   </div>
                 </div>

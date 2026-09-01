@@ -173,12 +173,16 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 #s7 .wrap{position:absolute;inset:0;padding:52px 90px 70px;display:flex;flex-direction:column;}
 #s7 .slide-label{margin-bottom:2px;}
 #s7 .slide-title{font-size:38px;margin-bottom:2px;}
+#s7 .s7-lead{font-size:17px;color:var(--muted);line-height:1.45;max-width:1180px;margin-bottom:4px;opacity:0;animation:fadeUp .6s .35s forwards;}
 #s7 .table-wrap{display:flex;flex-direction:column;gap:3px;margin:0;justify-content:center;padding-top:2px;flex:1;min-height:0;}
 #s7 .verdict{margin-top:auto;margin-bottom:0;flex-shrink:0;}
 .t-head{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;}
 .t-head-cell{padding:10px 16px;border-radius:12px 12px 0 0;font-size:17px;font-weight:700;text-align:center;}
 .t-head-cell.lbl{color:var(--muted);background:transparent;}
-.t-head-cell.trad{color:#ff6b6b;background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.25);border-bottom:none;}
+/* Generic AI is a different architecture, not an opponent. Neutral gray keeps
+ * this column descriptive so the slide reads as positioning, with the real
+ * competitive field left to slide 8. */
+.t-head-cell.trad{color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--border);border-bottom:none;}
 .t-head-cell.bp{color:var(--cyan);background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.25);border-bottom:none;}
 .t-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;opacity:0;transform:translateX(-22px);transition:all .5s;margin-top:4px;}
 .t-row.vis{opacity:1;transform:translateX(0);}
@@ -186,7 +190,7 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 .t-row.highlight-row .t-cell.bpc{font-weight:800;font-size:18px;}
 .t-cell{padding:10px 16px;font-size:17px;border:1px solid;border-radius:10px;display:flex;align-items:center;gap:10px;transition:all .3s;}
 .t-cell.feat{color:#fff;font-weight:600;border-color:var(--border);background:rgba(255,255,255,.03);}
-.t-cell.trd{color:#ff8888;border-color:rgba(255,107,107,.2);background:rgba(255,107,107,.05);}
+.t-cell.trd{color:var(--muted);border-color:var(--border);background:rgba(255,255,255,.02);}
 .t-cell.bpc{color:var(--green);border-color:rgba(0,255,136,.25);background:rgba(0,255,136,.06);font-weight:600;transition:all .3s;}
 .t-cell.bpc.glow{animation:bpGlow 2.4s ease-in-out infinite;}
 @keyframes bpGlow{0%,100%{background:rgba(0,255,136,.06);box-shadow:none;border-color:rgba(0,255,136,.25);transform:scale(1);}40%{background:rgba(0,255,136,.3);box-shadow:0 0 28px rgba(0,255,136,.7);border-color:rgba(0,255,136,.8);transform:scale(1.02);}70%{background:rgba(0,255,136,.12);box-shadow:0 0 10px rgba(0,255,136,.3);border-color:rgba(0,255,136,.4);}}
@@ -195,20 +199,26 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 /* ══════════════ SLIDE 8 — COMPETITION ══════════════ */
 #s8 .wrap{position:absolute;inset:0;padding:44px 70px 92px;display:flex;flex-direction:column;}
 #s8 .slide-title{font-size:44px;margin-bottom:4px;}
+#s8 .cmp-lead{font-size:19px;color:var(--muted);line-height:1.45;max-width:1120px;margin-bottom:6px;opacity:0;animation:fadeUp .6s .35s forwards;}
 #s8 .cmp-wrap{display:flex;flex-direction:column;gap:10px;flex:1;justify-content:center;min-height:0;}
-.cmp-head,.cmp-row{display:grid;grid-template-columns:1.15fr 1fr 1fr 1.1fr 1fr;gap:10px;}
+.cmp-head,.cmp-row{display:grid;grid-template-columns:0.85fr 0.95fr 1.7fr;gap:10px;}
 .cmp-head-cell{padding:16px 14px;font-size:15px;font-weight:800;letter-spacing:.4px;line-height:1.25;color:var(--cyan);text-align:center;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.22);border-bottom:none;border-radius:12px 12px 0 0;display:flex;align-items:center;justify-content:center;}
 .cmp-head-cell.name{color:var(--muted);background:transparent;border:none;justify-content:flex-start;}
 .cmp-row{opacity:0;transform:translateX(-20px);transition:all .5s;}
 .cmp-row.vis{opacity:1;transform:translateX(0);}
-.cmp-cell{padding:22px 14px;font-size:15px;line-height:1.4;color:var(--muted);text-align:center;border:1px solid var(--border);background:rgba(255,255,255,.02);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.cmp-cell{padding:30px 16px;font-size:15px;line-height:1.4;color:var(--muted);text-align:center;border:1px solid var(--border);background:rgba(255,255,255,.02);border-radius:10px;display:flex;align-items:center;justify-content:center;}
 .cmp-cell.name{justify-content:flex-start;text-align:left;font-size:19px;font-weight:700;color:#fff;}
 .cmp-row.us .cmp-cell{border-color:rgba(0,255,136,.28);background:rgba(0,255,136,.06);}
 .cmp-cell.ours{color:var(--green);font-weight:600;}
+/* Players are named facts, the gap column is our argument. The green treatment
+ * marks the one column an investor should read as BrainPower's opening. */
+.cmp-cell.players{color:#fff;font-weight:500;}
+.cmp-cell.gap{justify-content:flex-start;text-align:left;color:var(--green);font-weight:500;border-color:rgba(0,255,136,.25);background:rgba(0,255,136,.05);}
 .cmp-row:hover .cmp-cell{filter:brightness(1.15);}
 #s8 .cmp-foot{margin-top:16px;background:linear-gradient(90deg,rgba(108,99,255,.16),rgba(0,212,255,.1));border:1px solid rgba(108,99,255,.32);border-radius:12px;padding:16px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;opacity:0;transform:translateY(14px);transition:all .5s;}
 #s8 .cmp-foot.vis{opacity:1;transform:translateY(0);}
-.cmp-foot-lbl{font-size:18px;font-weight:700;color:#fff;}
+.cmp-foot-lbl{font-size:18px;font-weight:700;color:#fff;flex-shrink:0;}
+.cmp-foot-txt{font-size:16px;color:var(--muted);line-height:1.45;flex:1;min-width:0;}
 #s8 .cmp-foot .todo-hint{margin-top:0;flex-basis:100%;}
 
 /* ══════════════ SLIDE 9 — MARKET ══════════════ */
@@ -243,6 +253,18 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 /* The attribution is the point of the TAM band, so it is set as body copy and
  * not as a footnote that a reader can skip. */
 .fn-src{font-size:12.5px;color:var(--muted);margin-top:12px;padding-top:10px;line-height:1.55;border-top:1px solid rgba(108,99,255,.28);font-style:italic;}
+/* The three bands read as a trajectory, not a funnel: the market grows, so the
+ * bands widen instead of narrowing. Same classes and colors, opposite taper. */
+#s9 .funnel.growth .fn-band.tam{width:72%;}
+#s9 .funnel.growth .fn-band.sam{width:86%;}
+#s9 .funnel.growth .fn-band.som{width:100%;}
+#s9 .mkt-facts{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px 22px;opacity:0;transform:translateY(16px);transition:all .5s;}
+#s9 .mkt-facts.vis{opacity:1;transform:translateY(0);}
+.mkt-facts-lbl{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:14px;}
+.mkt-facts-row{display:flex;align-items:stretch;gap:14px;}
+.mkt-fact{flex:1;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:16px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;}
+.mkt-fact-val{font-size:30px;font-weight:900;background:linear-gradient(135deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1;}
+.mkt-fact-lbl{font-size:13px;color:var(--muted);line-height:1.4;}
 #s9 .som-calc{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px 22px;opacity:0;transform:translateY(16px);transition:all .5s;}
 #s9 .som-calc.vis{opacity:1;transform:translateY(0);}
 .som-calc-lbl{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:14px;}
@@ -286,6 +308,26 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 #s11 .slide-label{margin-bottom:6px;}
 #s11 .slide-title{font-size:48px;margin-bottom:6px;}
 #s11 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:auto 0;width:100%;}
+/* Pricing ladder. Six tiers read left to right as a climb, so the tiers stay in
+ * one row and the highlighted tier is lifted rather than resized. */
+#s11 .plad-lbl{margin:auto 0 22px;font-size:16px;font-weight:700;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;opacity:0;animation:fadeUp .6s .35s forwards;}
+#s11 .plad{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;width:100%;align-items:stretch;}
+.pt{background:linear-gradient(145deg,#0d1525,#080d18);border:1px solid var(--border);border-radius:18px;padding:34px 18px 30px;min-height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;opacity:0;transform:translateY(30px);transition:all .6s;position:relative;cursor:pointer;}
+.pt.vis{opacity:1;transform:translateY(0);}
+.pt:hover{transform:translateY(-8px)!important;border-color:var(--purple);box-shadow:0 0 30px rgba(108,99,255,.2);}
+.pt-name{font-size:19px;font-weight:800;color:#fff;letter-spacing:.4px;}
+.pt-price{font-size:40px;font-weight:900;background:linear-gradient(135deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.05;}
+.pt-price span{font-size:15px;font-weight:600;color:var(--muted);-webkit-text-fill-color:var(--muted);}
+.pt-desc{font-size:14px;color:var(--muted);line-height:1.45;}
+.pt.pop{border-color:var(--purple);background:linear-gradient(145deg,rgba(108,99,255,.16),rgba(108,99,255,.04));box-shadow:0 0 28px rgba(108,99,255,.22);}
+.pt-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--purple);color:#fff;font-size:10px;font-weight:800;letter-spacing:1.2px;padding:4px 12px;border-radius:20px;white-space:nowrap;}
+.pt.ent{border-color:rgba(0,255,136,.4);background:linear-gradient(145deg,rgba(0,255,136,.1),rgba(0,255,136,.02));}
+.pt.ent:hover{border-color:var(--green);box-shadow:0 0 30px rgba(0,255,136,.2);}
+.pt.ent .pt-price{background:none;-webkit-text-fill-color:var(--green);font-size:32px;}
+#s11 .plad-foot{width:100%;margin:20px 0 auto;background:linear-gradient(90deg,rgba(108,99,255,.16),rgba(0,212,255,.1));border:1px solid rgba(108,99,255,.32);border-radius:12px;padding:16px 26px;display:flex;align-items:center;gap:18px;opacity:0;transform:translateY(14px);transition:all .5s;}
+#s11 .plad-foot.vis{opacity:1;transform:translateY(0);}
+.plad-foot-lbl{font-size:17px;font-weight:700;color:#fff;flex-shrink:0;}
+.plad-foot-txt{font-size:16px;color:var(--muted);line-height:1.45;}
 .bc{background:linear-gradient(145deg,#0d1525,#080d18);border:1px solid var(--border);border-radius:22px;padding:20px 22px;display:flex;flex-direction:column;gap:8px;opacity:0;transform:translateY(35px);transition:all .6s;cursor:pointer;position:relative;overflow:hidden;aspect-ratio:1/1;}
 .bc.vis{opacity:1;transform:translateY(0);}
 .bc:hover{transform:translateY(-8px)!important;border-color:var(--purple);box-shadow:0 0 40px rgba(108,99,255,.2);}
@@ -361,7 +403,10 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 #s14 .wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:32px 80px 30px;}
 #s14 .slide-label{margin-bottom:6px;}
 #s14 .slide-title{font-size:42px;margin-bottom:4px;}
-#s14 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:auto 0 0;width:100%;}
+#s14 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:auto 0;width:100%;align-items:stretch;}
+/* Bios differ a lot in length. Letting the bio take the slack keeps all three
+ * cards the same height and the expertise tags on one line across the row. */
+#s14 .tc-bio{flex:1;}
 .tc{background:linear-gradient(145deg,#0d1525,#080d18);border:1px solid var(--border);border-radius:22px;padding:28px 24px 22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;opacity:0;transform:translateY(35px);transition:all .6s;cursor:pointer;position:relative;overflow:hidden;aspect-ratio:1/1;}
 .tc.vis{opacity:1;transform:translateY(0);}
 .tc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transition:transform .4s;background:linear-gradient(90deg,var(--purple),var(--cyan));}
@@ -431,6 +476,7 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 .ask-terms{display:flex;gap:16px;margin-top:20px;}
 .ask-term{flex:1;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;flex-direction:column;align-items:flex-start;gap:9px;opacity:0;animation:fadeUp .6s .6s forwards;}
 .ask-term-lbl{font-size:12px;font-weight:800;letter-spacing:2px;color:var(--muted);text-transform:uppercase;}
+.ask-term-val{font-size:22px;font-weight:800;color:#fff;line-height:1.15;}
 #s16 .right{flex:1;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:0;}
 #s16 .plan{position:relative;width:100%;padding-left:36px;}
 .plan-hd{font-size:21px;font-weight:800;color:#fff;margin:0 0 20px -36px;opacity:0;animation:fadeUp .6s .35s forwards;}
@@ -440,10 +486,12 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 .plan-step.vis{opacity:1;transform:translateX(0);}
 .plan-dot{position:absolute;left:-36px;top:8px;width:22px;height:22px;border-radius:50%;border:3px solid var(--purple);background:var(--dark);box-shadow:0 0 12px rgba(108,99,255,.5);}
 .plan-step:nth-child(4) .plan-dot{border-color:var(--cyan);box-shadow:0 0 12px rgba(0,212,255,.5);}
-.plan-step:nth-child(5) .plan-dot{border-color:var(--green);box-shadow:0 0 12px rgba(0,255,136,.5);}
+.plan-step:nth-child(5) .plan-dot{border-color:var(--cyan);box-shadow:0 0 12px rgba(0,212,255,.5);}
+.plan-step:nth-child(6) .plan-dot{border-color:var(--green);box-shadow:0 0 12px rgba(0,255,136,.5);}
 .plan-body{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:9px;}
 .plan-body .todo-hint{margin-top:0;}
 .plan-when{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--cyan);text-transform:uppercase;}
+.plan-txt{font-size:17px;color:#fff;line-height:1.45;}
 
 /* ══════════════ SLIDE 17 — CLOSING ══════════════ */
 #s17 .wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px;}
@@ -513,6 +561,7 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
   .pd-icon-ring span{font-size:24px!important;}
   .pd-name{font-size:20px;}
   .pd-sub{font-size:14px;}
+  #s7 .s7-lead{font-size:14px;margin-bottom:10px;}
   #s7 .table-wrap{gap:10px;}
   #s7 .t-head{display:none;}
   #s7 .t-row{grid-template-columns:1fr!important;gap:6px!important;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;padding:10px;margin-top:0;}
@@ -539,6 +588,18 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
   .oc-label{font-size:14px;}
   .oc-sub{font-size:11px;}
   #s11 .cards{grid-template-columns:1fr!important;gap:14px;}
+  #s11 .plad{grid-template-columns:repeat(2,1fr)!important;gap:10px;}
+  #s11 .plad-lbl{font-size:12px;letter-spacing:1px;margin-bottom:12px;}
+  .pt{padding:18px 10px 14px;gap:6px;border-radius:14px;min-height:132px;}
+  .pt-name{font-size:14px;}
+  .pt-price{font-size:24px;}
+  .pt-price span{font-size:11px;}
+  .pt.ent .pt-price{font-size:20px;}
+  .pt-desc{font-size:11px;}
+  .pt-badge{font-size:8px;padding:3px 8px;top:-9px;}
+  #s11 .plad-foot{flex-direction:column;align-items:flex-start;gap:8px;padding:14px 16px;margin-top:14px;}
+  .plad-foot-lbl{font-size:15px;}
+  .plad-foot-txt{font-size:13px;}
   .bc{aspect-ratio:auto!important;padding:16px 18px;gap:6px;}
   .bc-img{height:140px;}
   .bc-icon-wrap{width:42px;height:42px;font-size:22px;}
@@ -594,11 +655,11 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
   .cmp-cell{display:block;padding:9px 12px;font-size:13px;text-align:left;line-height:1.45;}
   .cmp-cell.name{font-size:17px;}
   /* Without the header row the axis has to travel with the cell. */
-  .cmp-row .cmp-cell:nth-child(2)::before{content:'Reproducibility · ';color:rgba(0,212,255,.75);font-weight:700;margin-right:4px;}
-  .cmp-row .cmp-cell:nth-child(3)::before{content:'Auditability · ';color:rgba(0,212,255,.75);font-weight:700;margin-right:4px;}
-  .cmp-row .cmp-cell:nth-child(4)::before{content:'Per-decision computation · ';color:rgba(0,212,255,.75);font-weight:700;margin-right:4px;}
-  .cmp-row .cmp-cell:nth-child(5)::before{content:'3D exploration · ';color:rgba(0,212,255,.75);font-weight:700;margin-right:4px;}
-  #s8 .cmp-foot{padding:14px 16px;gap:10px;margin-top:14px;}
+  .cmp-row .cmp-cell:nth-child(2)::before{content:'Players · ';color:rgba(0,212,255,.75);font-weight:700;margin-right:4px;}
+  .cmp-row .cmp-cell:nth-child(3)::before{content:'The gap BrainPower fills · ';color:rgba(0,255,136,.8);font-weight:700;margin-right:4px;}
+  #s8 .cmp-lead{font-size:14px;margin-bottom:10px;}
+  .cmp-foot-txt{font-size:13px;}
+  #s8 .cmp-foot{padding:14px 16px;gap:8px;margin-top:14px;flex-direction:column;align-items:flex-start;}
   .cmp-foot-lbl{font-size:15px;}
   #s9 .right{gap:14px;}
   .fn-band{padding:14px 16px;}
@@ -609,6 +670,11 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
   .som-calc-row{flex-direction:column;align-items:stretch;gap:8px;}
   .som-field{min-height:auto;padding:12px;}
   .som-op{text-align:center;font-size:22px;}
+  #s9 .funnel.growth .fn-band.tam,#s9 .funnel.growth .fn-band.sam,#s9 .funnel.growth .fn-band.som{width:100%;}
+  #s9 .mkt-facts{padding:14px 16px;}
+  .mkt-facts-row{flex-direction:column;gap:8px;}
+  .mkt-fact{padding:12px;}
+  .mkt-fact-val{font-size:24px;}
   #s13 .acc-lede{font-size:15px!important;}
   #s13 .acc-grid{grid-template-columns:1fr!important;gap:12px!important;margin-top:12px;}
   .acc-card{padding:16px;gap:9px;}
