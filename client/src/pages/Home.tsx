@@ -403,23 +403,20 @@ export default function Home() {
               <div className="wn-grid">
                 <div className="wn-card" style={{ transitionDelay: ".25s" }}>
                   <div className="wn-num">01</div>
-                  <div className="wn-slot"><span className="todo">TODO-FATHI</span></div>
-                  <div className="todo-hint">Driver one. The shift in the market, the regulation, or the technology that makes this the moment. One line, with its source.</div>
+                  <div className="wn-text">The shift from generative AI that guesses to AI that can be trusted and audited. Enterprises now require explainable, reproducible decisions, not plausible-sounding ones.</div>
                 </div>
                 <div className="wn-card" style={{ transitionDelay: ".45s" }}>
                   <div className="wn-num">02</div>
-                  <div className="wn-slot"><span className="todo">TODO-FATHI</span></div>
-                  <div className="todo-hint">Driver two. Same rule. If it cannot be sourced, it does not go on the slide.</div>
+                  <div className="wn-text">AI is finally capable enough to matter for high-stakes decisions, but &ldquo;it usually gets it right&rdquo; is not good enough when the stakes are millions.</div>
                 </div>
                 <div className="wn-card" style={{ transitionDelay: ".65s" }}>
                   <div className="wn-num">03</div>
-                  <div className="wn-slot"><span className="todo">TODO-FATHI</span></div>
-                  <div className="todo-hint">Driver three. Same rule.</div>
+                  <div className="wn-text">Computing power is now affordable enough to run thousands of simulations per decision in real time, which was not practical before.</div>
                 </div>
               </div>
               <div className="wn-foot">
                 <div className="wn-foot-lbl">Why not two years ago, and why not two years from now</div>
-                <span className="todo">TODO-FATHI</span>
+                <div className="wn-foot-txt">Two years ago the models were not reliable enough and the compute was too expensive to simulate at this scale. Two years from now, enterprise buyers will have standardized on whichever engines earned their trust first.</div>
               </div>
             </div>
           </div>
@@ -816,8 +813,8 @@ export default function Home() {
                     <div className="ms-card-num" style={{ color: "var(--cyan)" }}>Q3</div>
                     <div className="ms-card-label">Launch Target</div>
                   </div>
-                  <div className="ms-card" style={{ transitionDelay: ".9s", borderTop: "2px solid var(--muted)" }}>
-                    <div className="ms-card-num" style={{ color: "var(--muted)", fontSize: "26px" }}><span className="todo">TODO-FATHI</span></div>
+                  <div className="ms-card" style={{ transitionDelay: ".9s", borderTop: "2px solid var(--purple)" }}>
+                    <div className="ms-card-num" style={{ color: "var(--purple)", fontSize: "38px" }}>$1.5M</div>
                     <div className="ms-card-label">Raise Goal</div>
                   </div>
                 </div>
@@ -857,7 +854,6 @@ export default function Home() {
                   <div className="acc-ev-lbl">Back-test evidence</div>
                   <div className="acc-ev-note">No completed back-test and no accuracy figure is claimed at this stage. This is where that evidence goes once it exists.</div>
                 </div>
-                <span className="todo">TODO-FATHI</span>
               </div>
             </div>
           </div>

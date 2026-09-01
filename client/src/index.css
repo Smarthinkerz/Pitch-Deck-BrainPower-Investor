@@ -103,6 +103,10 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;touch-action:ma
 .wn-card:hover{border-color:var(--purple);box-shadow:0 0 28px rgba(108,99,255,.18);transform:translateY(-6px)!important;}
 .wn-num{font-size:46px;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .wn-card .todo-hint{margin-top:0;}
+.wn-text{font-size:20px;color:#fff;line-height:1.5;}
+/* The label states the question, the answer takes the remaining width. */
+#s3 .wn-foot .wn-foot-lbl{flex:0 0 auto;max-width:38%;}
+.wn-foot-txt{flex:1;min-width:0;font-size:16px;color:var(--muted);line-height:1.45;}
 #s3 .wn-foot{display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:linear-gradient(90deg,rgba(108,99,255,.16),rgba(0,212,255,.1));border:1px solid rgba(108,99,255,.32);border-radius:12px;padding:18px 28px;margin-top:14px;opacity:0;transform:translateY(14px);transition:all .5s;}
 #s3 .wn-foot.vis{opacity:1;transform:translateY(0);}
 .wn-foot-lbl{font-size:20px;font-weight:700;color:#fff;flex:1;}
