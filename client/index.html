@@ -7,13 +7,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      /* Inline so it works even if the CSS bundle never loads. */
+      #boot-fallback {
+        opacity: 0;
+        animation: bfIn 0.4s 2.5s forwards;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 18vh 24px 24px;
+        text-align: center;
+        color: #fff;
+        background: #05080f;
+        min-height: 100vh;
+        font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+      }
+      #boot-fallback h1 { font-size: 34px; margin: 0 0 8px; }
+      #boot-fallback p { color: #a0aec0; line-height: 1.5; margin: 0 0 12px; }
+      #boot-fallback .bf-note { font-size: 14px; }
+      #boot-fallback a { color: #00d4ff; }
+      @keyframes bfIn { to { opacity: 1; } }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Fallback content. React's createRoot replaces these children on mount,
+       * so this is only ever seen if the bundle fails to parse or execute, which
+       * would otherwise leave a blank page. It fades in after 2.5s so a healthy
+       * load never flashes it. -->
+    <div id="root">
+      <div id="boot-fallback">
+        <h1>BrainPower&nbsp;AI</h1>
+        <p>The Decision Intelligence Engine</p>
+        <p class="bf-note">
+          This deck needs a modern browser with JavaScript enabled. If you are
+          seeing this, try reloading, or open it on a desktop browser.
+        </p>
+        <p class="bf-note">
+          <a href="mailto:fathi.alriyami@smarthinkerz.com">fathi.alriyami@smarthinkerz.com</a>
+        </p>
+      </div>
+    </div>
+    <noscript>
+      <div style="padding:24px;color:#fff;font-family:sans-serif">
+        This presentation requires JavaScript to be enabled.
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>
 </html>
